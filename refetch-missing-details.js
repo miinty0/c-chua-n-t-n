@@ -12,6 +12,7 @@ const HEADERS  = {
 const REQUEST_DELAY = 600;
 const JITTER        = 300;
 const MAX_RETRY      = 3; // số lần thử lại cho lỗi mạng / 429 / 5xx trước khi coi là "blocked"
+const BLOCKED_STREAK_LIMIT = 3; // số book_id LIÊN TIẾP bị "blocked" trước khi dừng cả run (nghi bot bị chặn thật)
 
 const BASE = 'fanqienovel.com';
 const PAGE = `https://${BASE}/page`;
@@ -154,10 +155,16 @@ async function fetchDetailWithRetry(bookId) {
         continue;
       }
       if (res.status !== 200) {
-        console.log(`  [${bookId}] HTTP ${res.status} — coi như bị chặn`);
-        return { kind: 'blocked', reason: `HTTP ${res.status}` };
+        // Không kết luận "blocked" ngay từ status code: fanqie có thể trả 404/403
+        // kèm body vẫn là trang Nuxt đầy đủ (vd sách hidden có status=null trong INITIAL_STATE).
+        // Để parseDetailPage tự quyết định dựa trên nội dung thật của body.
+        console.log(`  [${bookId}] HTTP ${res.status} — vẫn thử parse body trước khi kết luận`);
       }
-      return parseDetailPage(res.data);
+      const parsed = parseDetailPage(res.data);
+      if (parsed.kind === 'blocked' && res.status !== 200) {
+        parsed.reason = `${parsed.reason} (HTTP ${res.status})`;
+      }
+      return parsed;
     } catch (e) {
       console.log(`  [${bookId}] lỗi mạng (lần ${t}/${MAX_RETRY}): ${e.message}`);
       if (t < MAX_RETRY) await sleep(3000 * t);
@@ -218,19 +225,36 @@ async function main() {
   const touchedFiles = new Set();
   let updatedCount = 0;
   let hiddenCount  = 0;
-  let blockedAt    = null;
+  let blockedCount = 0;   // tổng số book_id bị blocked trong suốt run (kể cả những lần "trượt" giữa chừng)
+  let processedCount = 0; // số book_id đã thực sự gọi fetch (để tính "chưa xử lý" cho đúng)
+  let consecutiveBlocked = 0;
+  let stoppedEarly = null; // { bookId, streak } nếu dừng sớm do chuỗi blocked liên tiếp
 
   try {
     for (let i = 0; i < uniqueIds.length; i++) {
       const bookId = uniqueIds[i];
       console.log(`[${i + 1}/${uniqueIds.length}] fetching ${bookId}...`);
       const result = await fetchDetailWithRetry(bookId);
+      processedCount++;
 
       if (result.kind === 'blocked') {
-        console.log(`⛔ Dừng tại book_id=${bookId} (${result.reason}). Lưu lại những gì đã lấy được từ đầu tới giờ.`);
-        blockedAt = bookId;
-        break;
+        blockedCount++;
+        consecutiveBlocked++;
+        console.log(`  ⚠️ blocked (${result.reason}) — chuỗi liên tiếp: ${consecutiveBlocked}/${BLOCKED_STREAK_LIMIT}`);
+
+        if (consecutiveBlocked >= BLOCKED_STREAK_LIMIT) {
+          console.log(`⛔ Dừng: ${BLOCKED_STREAK_LIMIT} book_id liên tiếp bị blocked (nghi bot bị chặn thật). Lưu lại những gì đã lấy được từ đầu tới giờ.`);
+          stoppedEarly = { bookId, streak: consecutiveBlocked };
+          break;
+        }
+
+        // Chưa đủ ngưỡng → không dừng cả run, thử tiếp book_id kế tiếp
+        if (i < uniqueIds.length - 1) await jitteredDelay();
+        continue;
       }
+
+      // Bất kỳ kết quả không-blocked nào (ok/hidden) đều xóa chuỗi liên tiếp
+      consecutiveBlocked = 0;
 
       const occurrences = idMap.get(bookId);
 
@@ -269,12 +293,14 @@ async function main() {
       console.log(`  đã lưu → data/${filename}`);
     }
 
+    const notProcessed = uniqueIds.length - processedCount;
+
     console.log('='.repeat(50));
-    console.log(`Kết quả: updated=${updatedCount} hidden=${hiddenCount} còn lại=${uniqueIds.length - updatedCount - hiddenCount - (blockedAt ? 1 : 0)}`);
-    if (blockedAt) {
-      console.log(`Bị chặn tại book_id=${blockedAt} — chạy lại workflow này sau để tiếp tục với các book_id còn lại.`);
+    console.log(`Kết quả: updated=${updatedCount} hidden=${hiddenCount} blocked=${blockedCount} chưa xử lý=${notProcessed}`);
+    if (stoppedEarly) {
+      console.log(`Dừng sớm sau chuỗi ${stoppedEarly.streak} book_id liên tiếp bị blocked, gần nhất là book_id=${stoppedEarly.bookId} — chạy lại workflow này sau để tiếp tục với các book_id còn lại.`);
     } else {
-      console.log('Hoàn tất toàn bộ candidate, không bị chặn.');
+      console.log('Hoàn tất toàn bộ candidate.');
     }
   }
 }
