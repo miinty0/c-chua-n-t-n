@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-01 19:12:20",
-  "update_date": "2026-08-01",
+  "update_time": "2026-08-02 19:11:39",
+  "update_date": "2026-08-02",
   "category_id": 747,
-  "total_count": 646,
-  "new_count": 7,
+  "total_count": 648,
+  "new_count": 2,
   "books": [
     {
       "book_id": "7591716077432753177",
@@ -13951,6 +13951,50 @@
       "currentPos": 135,
       "rankPosDiff": 0,
       "read_count": "1193",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7650737707861167129",
+      "book_name": "三七穿越盗墓世界",
+      "author": "呦呦鹿宁",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "灵异",
+        "同人",
+        "悬疑恋爱",
+        "风水秘术"
+      ],
+      "abstract": "灵魂摆渡里反应慢半拍的孟婆三七无意间离开了黄泉，被人类的花花世界所吸引，又遇见一群把她当妹妹宠的人，不过这几个哥哥怎么都奇奇怪怪，总是喜欢往地底下钻呢？算了，看在他们这么弱小的份上，她就勉为其难地护着他们吧～\n三七是被吴邪捡到当妹妹养的，所以跟吴邪相处最多",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/ai-mark/p2o6e0f2f3160ed70ac923bbb9d81c0e893",
+      "last_chapter_time": 1785637234,
+      "first_chapter_time": 1781502963,
+      "currentPos": 84,
+      "rankPosDiff": 0,
+      "read_count": "4943",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7643744403802049561",
+      "book_name": "疯批少女锤爆刑侦王牌",
+      "author": "懒楚",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "推理",
+        "破案",
+        "群像",
+        "悬疑恋爱"
+      ],
+      "abstract": "【疯批少女+双强cp+群像破案+爽文】\r\n四次惨死，次次丧命于同一人之手！\r岑漾临死意外绑定破案系统，并重回遇害前二十分钟。\r\n她参加节目只是为了赚生活费，谁知道却摊上这么个事！\r\n这一次不管付出什么代价，她一定要保住自己的命！\n\r暗处的凶手伺机而动，面对警察以及众人的质疑，岑漾不再坐以待毙，抢先警方锁定真凶，凭一己之力碾压全场，撕开古堡连环命案的隐秘面纱！\n\r后来她凭着过人的胆识和手里的冰箱，一跃成为警局特聘顾问。\n\r水库沉尸案，环保人员失踪案，奶茶店投毒案……\n海市刑侦队的破案率成了国内刑侦大队的表率。\n\r随着一个个案件的揭���，她深陷死亡循环的真相也随之揭开。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o57c43e7be9610580418cc1538e21676b",
+      "last_chapter_time": 1785592838,
+      "first_chapter_time": 1779698453,
+      "currentPos": 136,
+      "rankPosDiff": 0,
+      "read_count": "1186",
       "rankMold": 1
     }
   ]
