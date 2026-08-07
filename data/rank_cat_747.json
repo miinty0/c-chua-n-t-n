@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-06 19:58:05",
-  "update_date": "2026-08-06",
+  "update_time": "2026-08-07 18:43:50",
+  "update_date": "2026-08-07",
   "category_id": 747,
-  "total_count": 656,
-  "new_count": 1,
+  "total_count": 658,
+  "new_count": 2,
   "books": [
     {
       "book_id": "7591716077432753177",
@@ -14169,6 +14169,47 @@
       "currentPos": 134,
       "rankPosDiff": 0,
       "read_count": "2234",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7114363359696260109",
+      "book_name": "蛇王祭",
+      "author": "爱吃芹菜炒肉皮的凌福",
+      "tags": [
+        "女频悬疑",
+        "悬疑恋爱",
+        "灵异"
+      ],
+      "abstract": "三年大旱，颗粒无收，饿殍遍野，一声惊天巨响后，一条几十米长，水桶腰粗的黑蛇，掉落在了民上村，村民们如饥饿般的野狼，蜂蛹而至，将大蛇啃食了干净，从此以后，民上村便受到了诅咒……",
+      "status": "Completed",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/88986a39184a6b931b3dfe494f699803",
+      "last_chapter_time": 1661620631,
+      "first_chapter_time": 1656682943,
+      "currentPos": 232,
+      "rankPosDiff": 0,
+      "read_count": "9763",
+      "rankMold": 2
+    },
+    {
+      "book_id": "7661196181682261017",
+      "book_name": "光崽的盗笔旅行",
+      "author": "每天都emo",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "穿越",
+        "灵异",
+        "同人",
+        "悬疑恋爱"
+      ],
+      "abstract": "落入异世的光崽，矜矜业业肝图的旅行。光遇退游老玩家，很久没玩了，就按照自己的印象写，盗笔也随缘，时间线不一定准确。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2ofa71088085d7137616813a3f8d3e4ac2",
+      "last_chapter_time": 1786031015,
+      "first_chapter_time": 1783783697,
+      "currentPos": 94,
+      "rankPosDiff": 0,
+      "read_count": "2470",
       "rankMold": 1
     }
   ]
