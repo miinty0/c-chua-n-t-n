@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-08 18:22:22",
-  "update_date": "2026-08-08",
+  "update_time": "2026-08-09 18:23:41",
+  "update_date": "2026-08-09",
   "category_id": 745,
-  "total_count": 628,
-  "new_count": 10,
+  "total_count": 631,
+  "new_count": 3,
   "books": [
     {
       "book_id": "7590727777817480254",
@@ -13759,6 +13759,70 @@
       "currentPos": 166,
       "rankPosDiff": 0,
       "read_count": "1001",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7664777273513348120",
+      "book_name": "半岛：从路遇女团队长开始",
+      "author": "易景行",
+      "tags": [
+        "星光璀璨",
+        "现代言情",
+        "穿越",
+        "娱乐圈",
+        "明星",
+        "情有独钟"
+      ],
+      "abstract": "【单女主】➕【韩娱】➕【事业恋爱双线】➕【轻松日常】➕【无系统】\n同驴友一起穿越回了2013年的周愿安，在首尔大学做交换生的时候偶遇了上辈子自己最喜欢的韩娱idol\n既然上辈子她遗憾重重，现在正值事业低谷，那就让周愿安来弥补她的遗憾吧\n直到她们再次获得一位大奖之后，\n“愿安，除了你是我的粉丝以外，还有什么是你帮助我的理由呢？”\n“努那，其实我…”",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o900b0274fcb85a6a135ec347195835d9",
+      "last_chapter_time": 1786250365,
+      "first_chapter_time": 1784595233,
+      "currentPos": 121,
+      "rankPosDiff": 0,
+      "read_count": "2920",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7661943784124484632",
+      "book_name": "心动副本：被闺蜜拽进恋综后",
+      "author": "喜欢宝塔菜的樱木鬼束",
+      "tags": [
+        "星光璀璨",
+        "现代言情",
+        "娱乐圈"
+      ],
+      "abstract": "甜宠+恋综+双强\n沉浸式恋爱综艺《心动副本》重磅来袭！\n“不想上班？想带薪休假？那我们去恋综啊！”\n家人们！谁知道啊！就遇到了自己的天菜啊！\n",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o1ad290fe0dd1d4691870f89199a59b2f",
+      "last_chapter_time": 1786263051,
+      "first_chapter_time": 1784362706,
+      "currentPos": 143,
+      "rankPosDiff": 0,
+      "read_count": "4065",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7665220098084326424",
+      "book_name": "缘深情浅：禁欲影帝沦陷了",
+      "author": "W二二",
+      "tags": [
+        "星光璀璨",
+        "现代言情",
+        "暗恋",
+        "双洁",
+        "强强",
+        "一见钟情",
+        "娱乐圈"
+      ],
+      "abstract": "【假禁欲、假正经、真闷骚影帝VS貌美而不自知、有情感洁癖小说作者，双洁+老房子着火+细水流长】\n秦臻，是娱乐圈斩获多项大奖的影帝，也是秦家鲜少露面的小儿子。\n脸是禁欲的，心是火热的，死皮赖脸就能追求。\n两年前突遭变故，淡出圈子，两年后恩师求助，又加想通人生，重回圈子。\n本想接着走正经禁欲路线，岂料一眼万年。\n宋玉棠，追星追到心梗，一气之下不追了。\n然而自己小说被改编，男主角还是秦臻。\n看着眼前自己追了十多年的男人，隐隐有手痒的冲动。\n其实她是事业粉来着。\n某天好友问道：“见到秦臻本人了，他什么样？”\n宋玉棠微笑：“帅的惨绝人寰，人神共愤。”\n三个字概括：老畜生！",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o3741b3ee0a5601f36482a2fb8ac85a6f",
+      "last_chapter_time": 1786269513,
+      "first_chapter_time": 1784730163,
+      "currentPos": 165,
+      "rankPosDiff": 0,
+      "read_count": "1046",
       "rankMold": 1
     }
   ]
