@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-15 18:13:48",
-  "update_date": "2026-08-15",
+  "update_time": "2026-08-16 18:14:27",
+  "update_date": "2026-08-16",
   "category_id": 745,
-  "total_count": 664,
-  "new_count": 1,
+  "total_count": 667,
+  "new_count": 3,
   "books": [
     {
       "book_id": "7590727777817480254",
@@ -14565,6 +14565,70 @@
       "rankPosDiff": 0,
       "read_count": "12846",
       "rankMold": 2
+    },
+    {
+      "book_id": "7638360333085576217",
+      "book_name": "女穿男后我爆红全网",
+      "author": "一鲨鱼",
+      "tags": [
+        "星光璀璨",
+        "现代言情",
+        "穿越",
+        "娱乐圈",
+        "女强",
+        "无CP",
+        "全能"
+      ],
+      "abstract": "【女穿男+微万人迷+无CP+清冷���颜+冷脸萌...】刚出分，给个机会看看吧(●.●)\n余高珊在25岁这年突然变成了15岁的余高山。她是因为生命贫瘠，命数已定自然死���，而余高山是因为懦弱和蠢钝自己选择了死亡。\n余高珊，你于高山，比高山更高。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o598c16d0242f319a81a0082c2c820750",
+      "last_chapter_time": 1786723192,
+      "first_chapter_time": 1780243336,
+      "currentPos": 12,
+      "rankPosDiff": 0,
+      "read_count": "48360",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7669418932263980057",
+      "book_name": "TCG：大学毕业我靠语音厅挣钱",
+      "author": "锦秋言",
+      "tags": [
+        "星光璀璨",
+        "现代言情",
+        "直播",
+        "群像"
+      ],
+      "abstract": "【时间线是今年2026+慢节奏+听潮阁同人文+群像+事业线+直播+语音厅】刚大学毕业的苏不言突遭横祸，家人与女友意外离世，年幼妹妹重伤昏迷，高额治疗费让初入社会的他陷入绝境。\n四处借钱无果后，无意听到亲戚闲聊：有人做语音厅直播半年收入二十多万，挣钱速度远超普通工作。\n为凑妹妹的救命钱，走投无路的苏不言孤注一掷入行，机缘加入TCG。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o29130363552bb7e203cec6681e1f7386",
+      "last_chapter_time": 1786764961,
+      "first_chapter_time": 1785724852,
+      "currentPos": 87,
+      "rankPosDiff": 0,
+      "read_count": "4614",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7591608913024257086",
+      "book_name": "神颜社畜直播爆火，她想挣生活费",
+      "author": "一颗芒腻",
+      "tags": [
+        "星光璀璨",
+        "现代言情",
+        "直播",
+        "甜宠",
+        "娱乐圈"
+      ],
+      "abstract": "【避雷在第一章开头】【个播+甜宠+PK+1vn】\n花祁作为一个小财迷，工作两个月存款不升反降！这可不行！\n于是她将目光放在了直播上，打算给自己挣点生活费。\n这播着播着，她好像成为平台第一主播了？！\n",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2ocdd202a4df701602fd5d2cbbce7e9286",
+      "last_chapter_time": 1786806381,
+      "first_chapter_time": 1782829756,
+      "currentPos": 107,
+      "rankPosDiff": -3,
+      "read_count": "2921",
+      "rankMold": 1
     }
   ]
 }
