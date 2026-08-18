@@ -2465,7 +2465,7 @@ async function triggerCatScrape() {
   btn.innerHTML = `<span class="spinner"></span> Đang scrape…`;
 
   try {
-    await ghDispatchWorkflow('scrape.yml', { category_id: String(catId) });
+    await ghDispatchWorkflow('scrape-daily.yml', { category_id: String(catId) });
     recordFetch(catId);
     toast(`Đã kích hoạt scrape danh mục ${CATEGORY_NAMES[catId] || catId} ✓`, 'ok');
   } catch(e) {
