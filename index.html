@@ -248,7 +248,10 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 18px;
-    display: flex; gap: 14px;
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
     box-shadow: var(--shadow);
     transition: box-shadow .2s, transform .15s;
     position: relative;
@@ -265,6 +268,8 @@
 
   .book-thumb {
     width: 64px; height: 88px; flex-shrink: 0;
+    grid-column: 1;
+    grid-row: 1 / span 4;
     border-radius: 6px;
     background: var(--tag-bg);
     object-fit: cover;
@@ -272,13 +277,31 @@
   }
   .thumb-placeholder {
     width: 64px; height: 88px; flex-shrink: 0;
+    grid-column: 1;
+    grid-row: 1 / span 4;
     border-radius: 6px;
     background: linear-gradient(135deg, var(--tag-bg) 0%, var(--border2) 100%);
     display: flex; align-items: center; justify-content: center;
     font-size: 22px; border: 1px solid var(--border);
   }
 
-  .book-info { flex: 1; min-width: 0; }
+  /* Let the first four metadata rows sit beside the thumbnail, then allow
+     abstract, tags and footer to use the card's full width below it. */
+  .book-info { display: contents; }
+  .book-rank,
+  .book-name,
+  .book-author,
+  .book-id-link {
+    grid-column: 2;
+    min-width: 0;
+  }
+  .book-id-link { justify-self: start; }
+  .book-abstract,
+  .btn-abstract,
+  .book-tags,
+  .book-footer {
+    grid-column: 1 / -1;
+  }
   .book-rank {
     font-family: 'DM Mono', monospace;
     font-size: 10px; color: var(--muted);
@@ -297,7 +320,6 @@
   .rank-change { font-size: 10px; font-weight: 600; }
   .rank-change.up   { color: var(--green); }
   .rank-change.down { color: var(--accent); }
-  .rank-change.new  { color: var(--gold); }
 
   .book-name {
     font-family: 'Lora', serif;
@@ -773,7 +795,8 @@
     <button class="status-filter-btn" data-value="Ongoing" onclick="setStatusFilter('Ongoing')">🟡 Đang ra</button>
     <button class="status-filter-btn" data-value="Completed" onclick="setStatusFilter('Completed')">🟢 Hoàn thành</button>
   </div>
-  <button class="tab-btn" id="retry-scores-btn" onclick="retryLoadingScores()" title="Fetch lại score badge cho các truyện đang loading" style="font-size:12px;padding:10px 14px;color:var(--muted);">⭐ Retry score</button>
+  <button class="tab-btn" id="retry-scores-btn" onclick="retryLoadingScores()" title="Tải đồng thời toàn bộ score còn thiếu và tự lặp lại ngay cho đến khi hoàn tất; bấm lần nữa để dừng" style="font-size:12px;padding:10px 14px;color:var(--muted);">⭐ Retry score</button>
+  <button class="tab-btn" id="cleanup-btn" onclick="runFullCleanup()" title="Dọn truyện đã đọc khỏi latest, history, cache, category, rank-cat và các file seen" style="font-size:12px;padding:10px 14px;color:var(--muted);">🧹 Dọn dẹp</button>
 </div>
 
 <!-- ── Toast ── -->
@@ -829,7 +852,6 @@
       <div class="action-row">
         <button class="btn btn-outline btn-sm" id="daily-reload-btn" onclick="loadDaily()">↻ Tải lại</button>
         <button class="btn btn-danger btn-sm" id="daily-scrape-btn" onclick="triggerDailyScrape()">▶ Scrape ngay</button>
-        <button class="btn btn-outline btn-sm" id="cleanup-btn" onclick="runFullCleanup()" title="Dọn sạch history/cache theo read.json hiện tại">🧹 Dọn dẹp</button>
       </div>
     </div>
 
@@ -1627,6 +1649,8 @@ async function ghDispatchWorkflow(workflowId, inputs = {}) {
 
 // Read list helpers
 const pendingRead = { daily: new Set(), category: new Set(), rankcat: new Set() };
+const cleanupQueuedIds = new Set();
+let cleanupActivePromise = null;
 function updateReadBar(tab) {
   const count = pendingRead[tab] ? pendingRead[tab].size : 0;
   const prefix = tab === 'category' ? 'cat' : tab;
@@ -1659,19 +1683,41 @@ async function runFullCleanup() {
   }
 }
 
-async function cleanupAfterRead(readIds) {
-  // readIds: Set of book_id strings just marked as read
-  if (readIds.size === 0) return;
-  const ids = readIds;
+function cleanupAfterRead(readIds) {
+  // Merge overlapping cleanup requests so GitHub files are never updated by
+  // two competing cleanup runs at the same time.
+  for (const id of (readIds || [])) cleanupQueuedIds.add(String(id));
+  if (cleanupQueuedIds.size === 0) return Promise.resolve();
+  if (cleanupActivePromise) return cleanupActivePromise;
 
-  toast('🧹 Đang dọn history…', '');
+  const btn = document.getElementById('cleanup-btn');
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ Đang dọn…'; }
+
+  cleanupActivePromise = (async () => {
+    while (cleanupQueuedIds.size > 0) {
+      const ids = new Set(cleanupQueuedIds);
+      cleanupQueuedIds.clear();
+      await performCleanup(ids);
+    }
+  })().finally(() => {
+    cleanupActivePromise = null;
+    if (btn) { btn.disabled = false; btn.textContent = '🧹 Dọn dẹp'; }
+  });
+
+  return cleanupActivePromise;
+}
+
+async function performCleanup(ids) {
+  if (ids.size === 0) return;
+
+  toast(`🧹 Đang dọn ${ids.size} ID khỏi toàn bộ file dữ liệu…`, '');
 
   try {
     // ── 1. Clean latest.json ──
     try {
       const latestMeta = await ghGetFile('data/latest.json');
       const latest = JSON.parse(b64DecodeUTF8(latestMeta.content));
-      const filtered = (latest.books || []).filter(b => !ids.has(b.book_id));
+      const filtered = (latest.books || []).filter(b => !ids.has(String(b.book_id)));
       if (filtered.length !== (latest.books || []).length) {
         latest.books = filtered;
         latest.total_count = filtered.length;
@@ -1690,7 +1736,7 @@ async function cleanupAfterRead(readIds) {
           const filePath = `data/history/${date}.json`;
           const meta = await ghGetFile(filePath);
           const data = JSON.parse(b64DecodeUTF8(meta.content));
-          const filtered = (data.books || []).filter(b => !ids.has(b.book_id));
+          const filtered = (data.books || []).filter(b => !ids.has(String(b.book_id)));
 
           if (filtered.length === 0) {
             // Delete the file entirely
@@ -1742,7 +1788,7 @@ async function cleanupAfterRead(readIds) {
           try {
             const meta = await ghGetFile(`data/${f.name}`);
             const data = JSON.parse(b64DecodeUTF8(meta.content));
-        const filtered = (data.books || []).filter(b => !ids.has(b.book_id));
+        const filtered = (data.books || []).filter(b => !ids.has(String(b.book_id)));
         if (filtered.length !== (data.books || []).length) {
           data.books = filtered;
           data.total_count = filtered.length;
@@ -1775,7 +1821,7 @@ async function cleanupAfterRead(readIds) {
           try {
             const meta = await ghGetFile(`data/${f.name}`);
             const data = JSON.parse(b64DecodeUTF8(meta.content));
-            const filtered = (data.books || []).filter(b => !ids.has(b.book_id));
+            const filtered = (data.books || []).filter(b => !ids.has(String(b.book_id)));
             if (filtered.length !== (data.books || []).length) {
               data.books = filtered;
               data.total_count = filtered.length;
@@ -1784,11 +1830,25 @@ async function cleanupAfterRead(readIds) {
               if (rcData[rcCatId]) rcData[rcCatId].data.books = filtered;
             }
           } catch(e) { console.warn(`${f.name} cleanup failed:`, e.message); }
+          continue;
+        }
+
+        // ── rank_cat_*_seen.json ──
+        if (f.name.match(/^rank_cat_\d+_seen\.json$/)) {
+          try {
+            const meta = await ghGetFile(`data/${f.name}`);
+            const seenIds = JSON.parse(b64DecodeUTF8(meta.content));
+            const filtered = seenIds.filter(id => !ids.has(String(id)));
+            if (filtered.length !== seenIds.length) {
+              await ghPutFile(`data/${f.name}`, JSON.stringify(filtered, null, 2),
+                `cleanup: remove read IDs from ${f.name}`, meta.sha);
+            }
+          } catch(e) { console.warn(`${f.name} cleanup failed:`, e.message); }
         }
       }
     } catch(e) { console.warn('category list failed:', e.message); }
 
-    toast('✓ Đã dọn xong history & cache', 'ok');
+    toast('✓ Đã dọn xong toàn bộ file dữ liệu', 'ok');
   } catch(e) {
     toast('⚠ Cleanup lỗi: ' + e.message, 'err');
   }
@@ -1821,8 +1881,11 @@ async function submitRead(tab) {
     }
     pendingRead[tab].clear();
     updateReadBar(tab);
-    // Cleanup history/cache in background
-    cleanupAfterRead(justRead);
+    // Keep this save operation open until every related data file has been
+    // cleaned. This prevents a normal tab switch/close from silently cutting
+    // off the old background cleanup halfway through.
+    btn.textContent = '🧹 Đang dọn dữ liệu…';
+    await cleanupAfterRead(justRead);
     // Mark cards visually
     document.querySelectorAll('.book-card[data-pending-read="1"]').forEach(c => {
       c.dataset.pendingRead = '';
@@ -1854,54 +1917,149 @@ function toggleRead(bookId, btn, tab) {
   }
   updateReadBar(tab);
 }
-// Retry score badges
-function retryLoadingScores() {
-  const btn = document.getElementById('retry-scores-btn');
-  const activePanel = document.querySelector('.tab-panel.active');
-  const loadingBadges = activePanel
-    ? Array.from(activePanel.querySelectorAll('.score-badge.loading'))
-    : [];
-  if (loadingBadges.length === 0) {
-    toast('Không có badge nào đang loading.', '');
-    return;
-  }
-
-  const fetchFn = window.tmFetchScore;
-  if (typeof fetchFn !== 'function') {
-    toast('Userscript tmFetchScore chưa sẵn sàng. Hãy kiểm tra Tampermonkey.', 'err');
-    return;
-  }
-
-  btn.textContent = `⏳ ${loadingBadges.length} badge…`;
-  btn.disabled = true;
-
-  let done = 0;
-  const total = loadingBadges.length;
-
-  Promise.allSettled(loadingBadges.map(el => {
-    // Extract book_id from element id="score-BOOKID"
-    const bookId = el.id.replace('score-', '');
-    return fetchFn(bookId)
-      .then(score => {
-        if (!el.isConnected) return;
-        if (score) { el.className = 'score-badge'; el.textContent = '⭐' + score; }
-        else el.remove();
-      })
-      .catch(() => { if (el.isConnected) el.remove(); })
-      .finally(() => {
-        done++;
-        btn.textContent = `⏳ ${total - done}…`;
-      });
-  })).then(() => {
-    btn.disabled = false;
-    btn.textContent = '⭐ Retry score';
-    toast(`✓ Đã retry ${total} score badge`, 'ok');
-  });
-}
 // ── Score loading ──
 // Scores are only fetched for badges that actually scroll into view, not for
 // every rendered card at once. This is what keeps the score-fetch quota from
 // getting clogged when a tab renders hundreds of cards.
+// Resolved scores live independently from the rendered DOM. Re-rendering after
+// a status/search/category change therefore reuses them instead of fetching
+// the same book again.
+const scoreCache = new Map();       // book_id -> score (including "N/A")
+const scoreRequests = new Map();    // book_id -> in-flight Promise
+const scoreRetryState = { running: false, cancelled: false };
+
+function normalizedBookId(book) {
+  return String(book?.book_id ?? book?.bookId ?? book?.group_id ?? book?.groupId ?? book?.item_id ?? book?.id ?? '').trim();
+}
+
+function scoreBadgeBookId(el) {
+  return String(el?.dataset?.bookId || (el?.id || '').replace('score-', ''));
+}
+
+// Repair cards whose badge node is missing (for example after an external DOM
+// rewrite). Retry must not depend on the placeholder already being present.
+function ensureScoreBadges(root = document) {
+  root.querySelectorAll('.book-card').forEach(card => {
+    const bookId = String(card.dataset.id || '').trim();
+    if (!bookId) return;
+
+    const rankEl = card.querySelector('.book-rank');
+    if (!rankEl) return;
+
+    let badge = rankEl.querySelector('.score-badge');
+    if (!badge) {
+      badge = document.createElement('span');
+      const readCount = rankEl.querySelector('.read-count-badge');
+      rankEl.insertBefore(badge, readCount || null);
+    }
+
+    badge.dataset.bookId = bookId;
+    if (scoreCache.has(bookId)) {
+      badge.className = 'score-badge';
+      badge.textContent = '⭐' + scoreCache.get(bookId);
+    } else {
+      badge.className = 'score-badge loading';
+      badge.textContent = '⭐…';
+    }
+  });
+}
+
+function updateScoreBadges(bookId, score) {
+  document.querySelectorAll('.score-badge').forEach(el => {
+    if (scoreBadgeBookId(el) !== String(bookId)) return;
+    el.className = 'score-badge';
+    el.textContent = '⭐' + score;
+  });
+}
+
+// One network request per book at a time. All duplicate cards share it.
+function requestScore(bookId) {
+  bookId = String(bookId);
+  if (scoreCache.has(bookId)) return Promise.resolve(scoreCache.get(bookId));
+  if (scoreRequests.has(bookId)) return scoreRequests.get(bookId);
+
+  const fetchFn = window.tmFetchScore;
+  if (typeof fetchFn !== 'function') {
+    return Promise.reject(new Error('tmFetchScore chưa sẵn sàng'));
+  }
+
+  const request = Promise.resolve()
+    .then(() => fetchFn(bookId))
+    .then(score => {
+      // "N/A" and "0.0" are valid resolved values. Only null/empty remains
+      // unresolved and is eligible for the next immediate retry round.
+      if (score == null || score === '') throw new Error('Score trống');
+      const value = String(score);
+      scoreCache.set(bookId, value);
+      updateScoreBadges(bookId, value);
+      return value;
+    })
+    .finally(() => scoreRequests.delete(bookId));
+
+  scoreRequests.set(bookId, request);
+  return request;
+}
+
+function loadingScoreIdsInActivePanel() {
+  const activePanel = document.querySelector('.tab-panel.active');
+  if (!activePanel) return [];
+  ensureScoreBadges(activePanel);
+  return [...new Set(
+    Array.from(activePanel.querySelectorAll('.score-badge.loading'))
+      .map(scoreBadgeBookId)
+      .filter(Boolean)
+  )];
+}
+
+// Fetch every unresolved score in parallel. As soon as a whole pass finishes,
+// retry only the failures immediately; there is no artificial pause between
+// passes. Clicking the same button while it is running stops the loop safely.
+async function retryLoadingScores() {
+  const btn = document.getElementById('retry-scores-btn');
+
+  if (scoreRetryState.running) {
+    scoreRetryState.cancelled = true;
+    btn.textContent = '⏳ Đang dừng…';
+    return;
+  }
+
+  const bookIds = loadingScoreIdsInActivePanel();
+  if (bookIds.length === 0) {
+    toast('Không có badge nào đang loading.', '');
+    return;
+  }
+  if (typeof window.tmFetchScore !== 'function') {
+    toast('Userscript tmFetchScore chưa sẵn sàng. Hãy kiểm tra Tampermonkey.', 'err');
+    return;
+  }
+
+  scoreRetryState.running = true;
+  scoreRetryState.cancelled = false;
+  let round = 0;
+
+  try {
+    while (!scoreRetryState.cancelled) {
+      const unresolved = bookIds.filter(id => !scoreCache.has(id));
+      if (unresolved.length === 0) break;
+
+      round++;
+      btn.textContent = `⏹ Dừng · lượt ${round} · còn ${unresolved.length}`;
+      await Promise.allSettled(unresolved.map(requestScore));
+    }
+
+    const remaining = bookIds.filter(id => !scoreCache.has(id)).length;
+    if (scoreRetryState.cancelled) {
+      toast(`Đã dừng retry · còn ${remaining} score chưa tải.`, '');
+    } else {
+      toast(`✓ Đã tải xong ${bookIds.length} score qua ${round} lượt`, 'ok');
+    }
+  } finally {
+    scoreRetryState.running = false;
+    scoreRetryState.cancelled = false;
+    btn.textContent = '⭐ Retry score';
+  }
+}
+
 let _scoreObserver = null;
 function getScoreObserver() {
   if (_scoreObserver) return _scoreObserver;
@@ -1920,29 +2078,35 @@ function getScoreObserver() {
 
 function fetchScoreForBadge(el, attempts = 0) {
   if (!el.isConnected) return;
+  const bookId = scoreBadgeBookId(el);
+  if (scoreCache.has(bookId)) {
+    updateScoreBadges(bookId, scoreCache.get(bookId));
+    return;
+  }
   const fetchFn = window.tmFetchScore;
   if (typeof fetchFn !== 'function') {
-    if (attempts >= 15) { el.remove(); return; } // 15 × 200ms = 3s
+    // Keep the unresolved badge visible so the manual retry button can handle
+    // it later if Tampermonkey takes longer than three seconds to initialise.
+    if (attempts >= 15) return; // 15 × 200ms = 3s
     setTimeout(() => fetchScoreForBadge(el, attempts + 1), 200);
     return;
   }
-  const bookId = el.id.replace('score-', '');
-  fetchFn(bookId)
-    .then(score => {
-      if (!el.isConnected) return;
-      if (score) { el.className = 'score-badge'; el.textContent = '⭐' + score; }
-      else el.remove();
-    })
-    .catch(() => { if (el.isConnected) el.remove(); });
+  requestScore(bookId).catch(() => {
+    // Leave it in loading state. Retry only failed IDs on the next manual pass.
+  });
 }
 
 // Register score badges for the currently-rendered books to be observed —
 // each one only fires its actual fetch once it scrolls into the viewport.
 function loadScoresForCards(books) {
   const observer = getScoreObserver();
-  books.forEach(b => {
-    const el = document.getElementById(`score-${b.book_id}`);
-    if (el) observer.observe(el);
+  const wanted = new Set(books.map(normalizedBookId).filter(Boolean));
+  ensureScoreBadges(document);
+  document.querySelectorAll('.score-badge').forEach(el => {
+    const bookId = scoreBadgeBookId(el);
+    if (!wanted.has(bookId)) return;
+    if (scoreCache.has(bookId)) updateScoreBadges(bookId, scoreCache.get(bookId));
+    else observer.observe(el);
   });
 }
 // Formatting helpers
@@ -1953,7 +2117,6 @@ function fmtTime(ts) {
 }
 
 function rankChangeHTML(rc) {
-  if (rc === 'new') return `<span class="rank-change new">★ Mới</span>`;
   if (typeof rc === 'number') {
     if (rc > 0) return `<span class="rank-change up">▲${rc}</span>`;
     if (rc < 0) return `<span class="rank-change down">▼${Math.abs(rc)}</span>`;
@@ -1962,7 +2125,8 @@ function rankChangeHTML(rc) {
 }
 
 function bookCardHTML(book, tab, readSet = new Set()) {
-  const isRead = readSet.has(book.book_id);
+  const bookId = normalizedBookId(book);
+  const isRead = readSet.has(bookId);
   const thumb = book.thumb_url
     ? `<img class="book-thumb" src="${book.thumb_url}" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" /><div class="thumb-placeholder" style="display:none">📖</div>`
     : `<div class="thumb-placeholder">📖</div>`;
@@ -1973,12 +2137,12 @@ function bookCardHTML(book, tab, readSet = new Set()) {
       ? `<span class="tag ongoing">Còn tiếp</span>`
       : '';
   const rc = rankChangeHTML(book.rank_change);
-  const isPending = pendingRead[tab] && pendingRead[tab].has(book.book_id);
+  const isPending = pendingRead[tab] && pendingRead[tab].has(bookId);
   const readBtn = isRead
     ? `<button class="btn-read marked" disabled>✓ Đã đọc</button>`
     : isPending
-      ? `<button class="btn-read marked" onclick="toggleRead('${book.book_id}', this, '${tab}')">✓ Đã đọc</button>`
-    : `<button class="btn-read" onclick="toggleRead('${book.book_id}', this, '${tab}')">+</button>`;
+      ? `<button class="btn-read marked" onclick="toggleRead('${bookId}', this, '${tab}')">✓ Đã đọc</button>`
+    : `<button class="btn-read" onclick="toggleRead('${bookId}', this, '${tab}')">+</button>`;
 
   // rank-cat specific: currentPos + rankPosDiff + read_count
   const posDisplay = book.currentPos != null
@@ -1987,18 +2151,22 @@ function bookCardHTML(book, tab, readSet = new Set()) {
   const readCountBadge = book.read_count != null
     ? `<span class="read-count-badge">👁 ${Number(book.read_count).toLocaleString('vi-VN')}</span>`
     : '';
+  const cachedScore = scoreCache.get(bookId);
+  const scoreBadge = cachedScore !== undefined
+    ? `<span class="score-badge" data-book-id="${bookId}">⭐${cachedScore}</span>`
+    : `<span class="score-badge loading" data-book-id="${bookId}">⭐…</span>`;
 
   const moldClass = book.rankMold === 1 ? ' mold1-card' : '';
 
   return `
-  <div class="book-card${isRead ? ' is-read' : ''}${moldClass}" data-id="${book.book_id}" data-name="${(book.book_name||'').toLowerCase()}" data-pending-read="">
+  <div class="book-card${isRead ? ' is-read' : ''}${moldClass}" data-id="${bookId}" data-name="${(book.book_name||'').toLowerCase()}" data-pending-read="">
     ${thumb}
     <div class="book-info">
-      <div class="book-rank notranslate" id="rank-${book.book_id}">${posDisplay}<span class="score-badge loading" id="score-${book.book_id}">⭐…</span>${readCountBadge}</div>
+      <div class="book-rank notranslate" id="rank-${bookId}">${posDisplay}${scoreBadge}${readCountBadge}</div>
       <div class="book-name" title="${book.book_name}">${book.book_name}</div>
       <div class="book-author notranslate">${book.author || ''}</div>
-      <a href="https://fanqienovel.com/page/${book.book_id}" target="_blank" rel="noopener" class="book-id-link notranslate">#${book.book_id}</a>
-      ${book.abstract ? `<div class="book-abstract" id="abs-${book.book_id}">${book.abstract}</div><button class="btn-abstract" onclick="openAbstract('${book.book_id}', this)">Xem thêm ▾</button>` : ''}
+      <a href="https://fanqienovel.com/page/${bookId}" target="_blank" rel="noopener" class="book-id-link notranslate">#${bookId}</a>
+      ${book.abstract ? `<div class="book-abstract" id="abs-${bookId}">${book.abstract}</div><button class="btn-abstract" onclick="openAbstract('${bookId}', this)">Xem thêm ▾</button>` : ''}
       <div class="book-tags">${statusTag}${tags}</div>
       <div class="book-footer">
         <div class="book-time notranslate">${fmtTime(book.last_chapter_time)}${book.first_chapter_time ? '-' + fmtTime(book.first_chapter_time) : ''}</div>
@@ -2054,12 +2222,8 @@ async function loadDaily() {
 
     // Filter out already-read books
     const allBooks = Object.values(bookMap).filter(b => !dailyReadSet.has(b.book_id));
-    // Sort: unread new first (rank_change === 'new'), then by hot_rank
-    allBooks.sort((a, b) => {
-      if (a.rank_change === 'new' && b.rank_change !== 'new') return -1;
-      if (b.rank_change === 'new' && a.rank_change !== 'new') return 1;
-      return (a.hot_rank || 999) - (b.hot_rank || 999);
-    });
+    // Sort only by current hot rank.
+    allBooks.sort((a, b) => (a.hot_rank || 999) - (b.hot_rank || 999));
 
     registerBooks(allBooks);
     dailyRawBooks   = allBooks;
@@ -2426,12 +2590,15 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Warn before closing tab if there are unsaved marks
+// Browsers cannot await GitHub API work after a tab has been closed. Warn while
+// marks are unsaved OR cleanup is still active, so the user can cancel closing
+// and wait for the operation to finish.
 window.addEventListener('beforeunload', (e) => {
   const hasUnsaved = Object.keys(pendingRead).some(t => pendingRead[t].size > 0);
-  if (hasUnsaved) {
+  const cleanupBusy = cleanupActivePromise !== null || cleanupQueuedIds.size > 0;
+  if (hasUnsaved || cleanupBusy) {
     e.preventDefault();
-    e.returnValue = 'Bạn có sách đã đánh dấu nhưng chưa lưu. Bạn có chắc muốn rời trang?';
+    e.returnValue = '';
   }
 });
 
@@ -2442,7 +2609,14 @@ window.addEventListener('beforeunload', (e) => {
 const _bookRegistry = {};
 
 function registerBooks(books) {
-  for (const b of books) _bookRegistry[b.book_id] = b;
+  for (const b of books) {
+    const bookId = normalizedBookId(b);
+    if (!bookId) continue;
+    // Normalise alternate API field names once so filtering, read state,
+    // modal lookup and score fetching all refer to the same ID.
+    b.book_id = bookId;
+    _bookRegistry[bookId] = b;
+  }
 }
 
 function openAbstract(bookId, btn) {
