@@ -1,0 +1,103 @@
+name: Manual cleanup books
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Điều kiện dọn dẹp"
+        required: true
+        type: choice
+        default: last_chapter_time
+        options:
+          - first_chapter_time
+          - last_chapter_time
+          - abstract
+      year:
+        description: "Dọn từ năm này trở về trước (dùng cho hai chế độ thời gian)"
+        required: false
+        type: string
+        default: "2024"
+      keyword:
+        description: "Từ khóa mới; để trống để chỉ dùng danh sách đã lưu"
+        required: false
+        type: string
+        default: ""
+      dry_run:
+        description: "Chỉ xem trước, không commit dữ liệu"
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manual-cleanup-data-branch
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: app
+
+      - name: Checkout data branch
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data-branch
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Preview or run cleanup
+        env:
+          CLEANUP_MODE: ${{ inputs.mode }}
+          CLEANUP_YEAR: ${{ inputs.year }}
+          CLEANUP_KEYWORD: ${{ inputs.keyword }}
+          CLEANUP_DRY_RUN: ${{ inputs.dry_run }}
+        shell: bash
+        run: |
+          args=(
+            --mode "$CLEANUP_MODE"
+            --data-dir "$GITHUB_WORKSPACE/data-branch/data"
+          )
+
+          if [[ "$CLEANUP_MODE" == "abstract" ]]; then
+            args+=(--keyword "$CLEANUP_KEYWORD")
+          else
+            args+=(--year "$CLEANUP_YEAR")
+          fi
+
+          if [[ "$CLEANUP_DRY_RUN" == "true" ]]; then
+            args+=(--dry-run)
+          fi
+
+          node "$GITHUB_WORKSPACE/app/cleanup-books.js" "${args[@]}"
+
+      - name: Commit and push data branch
+        if: ${{ inputs.dry_run == false }}
+        working-directory: data-branch
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+
+          if git diff --cached --quiet; then
+            echo "Không có thay đổi để commit."
+            exit 0
+          fi
+
+          git commit -m "cleanup: ${{ inputs.mode }} filter"
+          git pull --rebase origin data
+          git push origin HEAD:data
