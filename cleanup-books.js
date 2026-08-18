@@ -1,12 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
+const SCRIPT_VERSION = '2026-08-18.4-pipe';
+
 // Manual cleanup utility for the repository's data branch.
 //
 // Examples:
 //   node cleanup-books.js --mode year --year 2024 --data-dir ./data --dry-run
 //   node cleanup-books.js --mode last_chapter_time --year 2024 --data-dir ./data
-//   node cleanup-books.js --mode abstract --keyword "双男" --data-dir ./data
+//   node cleanup-books.js --mode abstract --keyword "双男|主攻|主受" --data-dir ./data
 //   node cleanup-books.js --mode abstract --data-dir ./data
 
 function parseArgs(argv = process.argv.slice(2)) {
@@ -44,8 +46,9 @@ Chế độ:
   last_chapter_time   Dọn theo năm của last_chapter_time.
   abstract            Dùng mọi từ khóa đã lưu và có thể thêm từ mới bằng --keyword.
 
-Có thể nhập nhiều từ khóa mới trong --keyword, mỗi từ một dòng. Danh sách được
-lưu tại data/cleanup_abstract_keywords.json sau lần chạy thực thi thành công.
+Có thể nhập nhiều từ khóa mới trong --keyword, ngăn cách bằng dấu | hoặc xuống
+dòng. Danh sách được lưu tại data/cleanup_abstract_keywords.json sau lần chạy
+thực thi thành công.
 
 --dry-run chỉ hiển thị kết quả, không sửa file.
 `);
@@ -87,7 +90,8 @@ function writeJsonAtomic(filePath, value) {
 
 function parseKeywordInput(value) {
   return String(value ?? '')
-    .split(/\r?\n/)
+    // Accept an ASCII pipe, a full-width pipe, or one/more line breaks.
+    .split(/[\r\n|｜]+/u)
     .map(keyword => keyword.trim())
     .filter(Boolean);
 }
@@ -334,6 +338,7 @@ function printPlan(plan) {
   }
 
   console.log('='.repeat(68));
+  console.log(`Phiên bản: ${SCRIPT_VERSION}`);
   console.log(`Điều kiện: ${criterion}`);
   console.log(`Thư mục:   ${plan.options.dataDir}`);
   console.log(`Chế độ:    ${plan.options.dryRun ? 'DRY RUN — không sửa file' : 'THỰC THI'}`);
@@ -434,7 +439,9 @@ if (require.main === module) {
 }
 
 module.exports = {
+  SCRIPT_VERSION,
   parseArgs,
+  parseKeywordInput,
   firstChapterYear,
   lastChapterYear,
   bookMatches,
