@@ -1,3 +1,4 @@
+# Package version: 2026-08-18.4-pipe
 name: Manual cleanup books
 
 on:
@@ -18,7 +19,7 @@ on:
         type: string
         default: "2024"
       keyword:
-        description: "Từ khóa mới; để trống để chỉ dùng danh sách đã lưu"
+        description: "Nhiều cụm (dùng |); trống = dùng từ đã lưu"
         required: false
         type: string
         default: ""
@@ -65,8 +66,10 @@ jobs:
           CLEANUP_YEAR: ${{ inputs.year }}
           CLEANUP_KEYWORD: ${{ inputs.keyword }}
           CLEANUP_DRY_RUN: ${{ inputs.dry_run }}
+          CLEANUP_SCRIPT_VERSION: "2026-08-18.4-pipe"
         shell: bash
         run: |
+          echo "Workflow package: $CLEANUP_SCRIPT_VERSION"
           args=(
             --mode "$CLEANUP_MODE"
             --data-dir "$GITHUB_WORKSPACE/data-branch/data"
