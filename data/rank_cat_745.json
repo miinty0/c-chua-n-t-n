@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-18 18:25:36",
-  "update_date": "2026-08-18",
+  "update_time": "2026-08-19 18:25:22",
+  "update_date": "2026-08-19",
   "category_id": 745,
-  "total_count": 671,
-  "new_count": 8,
+  "total_count": 672,
+  "new_count": 1,
   "books": [
     {
       "book_id": "7590727777817480254",
@@ -14712,6 +14712,29 @@
       "last_chapter_time": 1785696747,
       "first_chapter_time": 1785034827,
       "currentPos": 161,
+      "rankPosDiff": 0,
+      "read_count": "1001",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7662001155974646808",
+      "book_name": "惊爆！双顶流死对头私下网恋塌房",
+      "author": "四月惊哲",
+      "tags": [
+        "星光璀璨",
+        "现代言情",
+        "破镜重圆",
+        "相互救赎",
+        "强强",
+        "娱乐圈",
+        "相爱相杀"
+      ],
+      "abstract": "甜宠搞笑｜娱乐圈死对头 ｜匿名网恋 ｜掉马 ｜初恋破镜重圆 ｜双向救赎  ｜无第三者\n荧幕形象：清冷禁欲影后 VS 阳光治愈顶流\n私下形象：压抑沙雕疯批女 VS 孤独阴郁内耗男\n\n\t线下见面：针锋相对、不死不休前任死对头\n\t线上小号：赤裸坦诚、语言大胆\n\n全网都以为是不死不休的顶流对家。\n没人知道，他们是遗憾七年的初恋前任。\n更没人知道——\n他们白天厮杀互刺、针锋相对。\n红毯互刺，撕番位，抢资源，势不两立。\n深夜却匿名裸恋、赤诚相对，倾诉取暖。\n是彼此黑暗高压下唯一解药，彼此放纵而大胆，行白日不可行之事。\n却在录制恋综时意外塌房。\n\n同款相撞线下：\n叶清黎：“巧合而已，我从不跟风任何人。”\n肖临：“我从不屑模仿别人，还不配！”\n\n线上：\n【欢喜肉丸子】：“哥哥，想你！要不要来个大尺度？”\n【饭桶酷仔】：“视频？满足！”",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2ob09ee009e3827158ad85fc7bb303ea35",
+      "last_chapter_time": 1787054943,
+      "first_chapter_time": 1784160261,
+      "currentPos": 155,
       "rankPosDiff": 0,
       "read_count": "1001",
       "rankMold": 1

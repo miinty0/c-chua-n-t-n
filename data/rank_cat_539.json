@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-18 18:25:24",
-  "update_date": "2026-08-18",
+  "update_time": "2026-08-19 18:25:17",
+  "update_date": "2026-08-19",
   "category_id": 539,
-  "total_count": 670,
-  "new_count": 7,
+  "total_count": 673,
+  "new_count": 3,
   "books": [
     {
       "book_id": "7582770497335610392",
@@ -14863,6 +14863,66 @@
       "currentPos": 146,
       "rankPosDiff": 0,
       "read_count": "1114",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7443625130309209113",
+      "book_name": "穿进盗笔：我成了张家圣女",
+      "author": "梦萤州",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "系统",
+        "穿越",
+        "盗墓",
+        "灵异"
+      ],
+      "abstract": "【1v2+人物OOC+CP小哥瞎子+盗笔与一人之下融合世界+女主时强时弱+时间线混乱+私设原创众多】\n瓶邪黑花党勿入，作者只看过电视剧，记得不太清楚，很多细节勿考究，觉得能看下去就看，看不下去就请移步别的作品\n张寒月一觉醒来就被系统带到了盗墓笔记世界\n小哥还没出生？成了圣女之后，张寒月发愤图强终于站在了张家顶峰\n结果就因为一次小小的篡改剧情，被狗天道抹去记忆扔到了大街上\n可是谁能告诉她！盗笔世界里都出现异人了！狗天道为什么死抓着她篡改剧情的事情不放啊！\n人物OOC，新人作者，文笔小白，不喜勿入，作者玻璃心，不要骂作者！不要骂作者！不要骂作者！！！",
+      "status": "Completed",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o07fded73968ec27939db09880b561943",
+      "last_chapter_time": 1787123401,
+      "first_chapter_time": 1735525978,
+      "currentPos": 127,
+      "rankPosDiff": 0,
+      "read_count": "1999",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7554407075334327358",
+      "book_name": "盗墓：好消息穿成张家人了",
+      "author": "姚瑶42412831",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "系统",
+        "穿越",
+        "盗墓",
+        "灵异",
+        "衍生"
+      ],
+      "abstract": "家人们，出张起灵的COS因为黑古金刀不能进地铁打滴滴上国道了，坏消息死了！好消息穿了！！！\n一睁眼就有人要杀我，叮当保命系统激活…\n只要见证名场面就能获得积分复活，系统先别介绍了，要死了，挖槽他要割我大动脉！救命救命救命救命\n虽然很想帮忙振兴张家，但是也没说需要我的小命啊，好不容易被系统选中了能再活一次，上线就送大砍刀吗？？？OOC致歉\n\n哦哦\n\nOOC道歉，",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o0698d332217ecd7aaddd8b28f4638a7c",
+      "last_chapter_time": 1787119510,
+      "first_chapter_time": 1786359630,
+      "currentPos": 144,
+      "rankPosDiff": 0,
+      "read_count": "1732",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7671296237672336446",
+      "book_name": "ID:7671296237672336446",
+      "author": "Unknown",
+      "tags": [],
+      "abstract": "",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o78dc57a14ff8f41cd4656e259f9d7451",
+      "last_chapter_time": 1787062840,
+      "first_chapter_time": 1786114318,
+      "currentPos": 150,
+      "rankPosDiff": 0,
+      "read_count": "1125",
       "rankMold": 1
     }
   ]
