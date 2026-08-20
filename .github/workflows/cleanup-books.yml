@@ -14,7 +14,7 @@ on:
           - last_chapter_time
           - abstract
       year:
-        description: "Dọn từ năm này trở về trước (dùng cho hai chế độ thời gian)"
+        description: "Dọn từ năm này trở về trước"
         required: false
         type: string
         default: "2024"
@@ -27,7 +27,7 @@ on:
         description: "Chỉ xem trước, không commit dữ liệu"
         required: true
         type: boolean
-        default: true
+        default: false
 
 permissions:
   contents: write
