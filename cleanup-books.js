@@ -26,7 +26,7 @@ function parseArgs(argv = process.argv.slice(2)) {
     else if (arg === '--year' && argv[i + 1] !== undefined) options.year = argv[++i].trim();
     else if (arg === '--keyword' && argv[i + 1] !== undefined) options.keyword = argv[++i];
     else if (arg === '--data-dir' && argv[i + 1] !== undefined) options.dataDir = path.resolve(argv[++i]);
-    else if (arg === '--dry-run') options.dryRun = false;
+    else if (arg === '--dry-run') options.dryRun = true;
     else if (arg === '--help' || arg === '-h') options.help = true;
     else throw new Error(`Tham số không hợp lệ: ${arg}`);
   }
