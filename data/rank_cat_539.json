@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-21 18:26:22",
-  "update_date": "2026-08-21",
+  "update_time": "2026-08-22 18:19:42",
+  "update_date": "2026-08-22",
   "category_id": 539,
-  "total_count": 678,
-  "new_count": 5,
+  "total_count": 679,
+  "new_count": 1,
   "books": [
     {
       "book_id": "7582770497335610392",
@@ -15043,6 +15043,29 @@
       "currentPos": 139,
       "rankPosDiff": 0,
       "read_count": "1158",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7661062444508253246",
+      "book_name": "规则怪谈，她入局即赢",
+      "author": "修俞",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "规则怪谈",
+        "惊悚游戏",
+        "无CP",
+        "群像",
+        "甜宠"
+      ],
+      "abstract": "[无cp群像+无脑甜爽文+非传统规则怪谈+亲/友情向+弹幕]\n祝栖愉一睁眼突然穿入规则副本之中，见过不少大风大浪的祝栖愉决定给观众一些小小的震撼\n结果发现…\n这些boss怎么都这么眼熟啊喂！\n刚开始的弹幕:很漂亮，但咋这么不听劝！\n后面的弹幕:？她怎么谁都认识",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o984798e674431d33adc363baea51def1",
+      "last_chapter_time": 1787324062,
+      "first_chapter_time": 1783747824,
+      "currentPos": 134,
+      "rankPosDiff": 0,
+      "read_count": "1097",
       "rankMold": 1
     }
   ]
