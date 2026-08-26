@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-25 18:28:25",
-  "update_date": "2026-08-25",
+  "update_time": "2026-08-26 18:32:25",
+  "update_date": "2026-08-26",
   "category_id": 747,
-  "total_count": 689,
-  "new_count": 4,
+  "total_count": 692,
+  "new_count": 3,
   "books": [
     {
       "book_id": "7591716077432753177",
@@ -14975,6 +14975,68 @@
       "currentPos": 146,
       "rankPosDiff": 0,
       "read_count": "1238",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7641582784737201176",
+      "book_name": "盗墓笔记之小狐狸又乱撩人",
+      "author": "爱吃甜的小胖子",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "盗墓",
+        "灵异",
+        "衍生",
+        "悬疑恋爱"
+      ],
+      "abstract": "沈辞从来没想过，有一天他会落入这样的局面。\n左边执拗盯着他的无邪，右边目不转睛的张麒麟，\n身前笑意温柔的解语花，身后玩味含笑的黑瞎子。\n四面合围，无路可退，所有人都注视着他。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o153035b9e796af1b36767e038d0ab013",
+      "last_chapter_time": 1787688606,
+      "first_chapter_time": 1779243886,
+      "currentPos": 233,
+      "rankPosDiff": 0,
+      "read_count": "6690",
+      "rankMold": 2
+    },
+    {
+      "book_id": "7669393519802338328",
+      "book_name": "案宗索迹：新人拿下了刑警队长",
+      "author": "喻暮",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "推理",
+        "破案",
+        "悬疑恋爱"
+      ],
+      "abstract": "警局公认的冰山贺屹，不近女色，冷得像块冰。\n直到实习女警姜矜来了。\n\n别人不敢跟贺屹顶嘴，她敢。\n别人不敢质疑他的判断，她敢。\n全警局都以为她要凉，结果——\n贺队长把她护在身后，案子一起破，人也一起谈。\n\n悬疑连环案步步惊心，\n冷面队长的温柔，只给她一人。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o85aa780258e012cb37f067bef25a5de1",
+      "last_chapter_time": 1787108134,
+      "first_chapter_time": 1785670154,
+      "currentPos": 122,
+      "rankPosDiff": 4,
+      "read_count": "1943",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7261933457792568332",
+      "book_name": "盗墓：你的黑瞎突然出现",
+      "author": "炒饭爱好者",
+      "tags": [
+        "女频悬疑",
+        "盗墓",
+        "灵异"
+      ],
+      "abstract": "齐怀信死在秦岭考古的路上，又在他以为是小说的世界里睁开了眼。\n\n\n他以为自己是个穿书的局外人，却不知道自己就是被从书页中抹去姓名的人。\n\n\n他是齐八爷从初雪里捡回的孩子，是黑瞎子穷尽一生只记得一个名字的故人，是张启灵唯一伸出手却没有接住的人，是胖子认认真真喊过“这是我哥们儿”的人，是吴斜在云顶天宫死也不肯松手的人。\n\n\n他懒散，怕麻烦，能省一事绝不多出一招。他对活着有一种近乎本能的敬畏，只要有人想活，他就会伸手。\n\n\n他被时间卷走，瞳孔像一根烧了太久的蜡烛，蒙着绸带，走过万水千山，他在一条河边伸出手等过一个人，说“以后都不用怕了”，他在格尔木疗养院的走廊里重新被握住衣袖，在张家古楼里最后一次松手。\n\n\n他不是一个会被长久记住的人，但这一次，所有人都记得他。\n\n\n他叫齐怀信，怀信抱朴，至死不渝。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2oaf46b32eee317b3159c397b0260c0235",
+      "last_chapter_time": 1787553954,
+      "first_chapter_time": 1690883549,
+      "currentPos": 149,
+      "rankPosDiff": 0,
+      "read_count": "1107",
       "rankMold": 1
     }
   ]
