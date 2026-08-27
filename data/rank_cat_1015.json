@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-26 18:32:56",
-  "update_date": "2026-08-26",
+  "update_time": "2026-08-28 04:09:39",
+  "update_date": "2026-08-28",
   "category_id": 1015,
-  "total_count": 1308,
-  "new_count": 10,
+  "total_count": 1318,
+  "new_count": 11,
   "books": [
     {
       "book_id": "7548686224362310680",
@@ -5860,28 +5860,6 @@
       "currentPos": 294,
       "rankPosDiff": 0,
       "read_count": "14528",
-      "rankMold": 2
-    },
-    {
-      "book_id": "7462054624350981182",
-      "book_name": "红楼甄嬛：金手指是两颗生子丹",
-      "author": "沐兮所求",
-      "tags": [
-        "女频衍生",
-        "系统",
-        "穿越",
-        "甄嬛衍生",
-        "红楼衍生",
-        "衍生"
-      ],
-      "abstract": "穿越到古代的女主不求感情，不求事业，只求荣华富贵。\n女主不会爱上任何男人，所求就是做太后，做能够掌控自己人生的大女主。",
-      "status": "Completed",
-      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o9c481b93c895d500e143f7c11676cdef",
-      "last_chapter_time": 1752067945,
-      "first_chapter_time": 1737419707,
-      "currentPos": 298,
-      "rankPosDiff": 0,
-      "read_count": "14589",
       "rankMold": 2
     },
     {
@@ -27982,6 +27960,233 @@
       "currentPos": 266,
       "rankPosDiff": 0,
       "read_count": "5625",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7624400865914260504",
+      "book_name": "综影视：女配重生，不负此生",
+      "author": "向蕊",
+      "tags": [
+        "女频衍生",
+        "重生",
+        "同人",
+        "如懿衍生",
+        "综影视",
+        "衍生"
+      ],
+      "abstract": "[ 综影视+重生+恶毒女配+姐妹]\n只有重生，没有换芯子。\n避雷：作者不太喜欢写虐女情节，还有基本不踩原女主。\n当女配重生做主角，原本的主角应该何去何从。\n从奇迹婉婉开始吧！\n魏嬿婉cp进忠\n琅嬅无cp\n宜修cp胤禵\n尔晴cp傅恒\n玄女cp折颜\n寸心cp白真\n安陵容\n年世兰\n……",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o979f40bfd733e12d0fe670d8dbc94fba",
+      "last_chapter_time": 1787788963,
+      "first_chapter_time": 1775195454,
+      "currentPos": 238,
+      "rankPosDiff": 0,
+      "read_count": "18069",
+      "rankMold": 2
+    },
+    {
+      "book_id": "7660907765442825241",
+      "book_name": "火凤凰之哈雷遇彗星",
+      "author": "夜光星辰",
+      "tags": [
+        "女频衍生",
+        "衍生",
+        "群像"
+      ],
+      "abstract": "当两柄最锋利的刀刃相遇，碰撞出的不仅是铁血与硝烟，还有彼此眼中最亮的光。                                           \n\n\n写着玩的，文笔不好，不看请划走",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o9edf4353b4f05a4a64726a8269aaf81b",
+      "last_chapter_time": 1787282884,
+      "first_chapter_time": 1784604494,
+      "currentPos": 124,
+      "rankPosDiff": 0,
+      "read_count": "12233",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7621566967324871742",
+      "book_name": "综影视：这破天富贵也是轮到我了",
+      "author": "休闲写文",
+      "tags": [
+        "女频衍生",
+        "衍生",
+        "系统",
+        "穿越",
+        "同人"
+      ],
+      "abstract": "大四学生隗灵幽，一睁眼刚猝死，就被萌新签到系统捡走，绑定穿越影视衍生小世界做任务。\n别人穿越慌得一批，她当场狂喜：\n“等了这么久，这泼天的富贵总算砸我头上了！”\n果断抱紧系统大腿，冲就完事，半点儿不耽误！",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o639d4a20d07fdd360d1efba8c4a7aeae",
+      "last_chapter_time": 1787761495,
+      "first_chapter_time": 1774803610,
+      "currentPos": 125,
+      "rankPosDiff": 0,
+      "read_count": "12192",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7672237490849188888",
+      "book_name": "综影视：钮钴禄氏，世世局尊",
+      "author": "郁雾云舒",
+      "tags": [
+        "女频衍生",
+        "系统",
+        "穿越",
+        "甄嬛衍生",
+        "综影视",
+        "衍生"
+      ],
+      "abstract": "钮祜禄氏，世世局尊（剧情进展不算快。）\n云舒穿越甄嬛传，如懿传，步步惊心等清宫小世界。\n卷一：甄嬛传，开局成为胤禛嫡福晋，养育弘历成为唯一太后（带系统）\n卷二：如懿传，开局成为渣龙弘历的嫡福晋，让大家拒绝懿症（构思中）\n卷三：步步惊心，成为历史上真正的钮祜禄氏，若曦是何人，宫女罢了（构思中）\n卷四：穿越康熙孝昭仁皇后（构思中）\n卷五：穿越皇太极后宫的清纯小白花（构思中）",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o44b75598451bf8cb3398119e983cfaa8",
+      "last_chapter_time": 1787746954,
+      "first_chapter_time": 1786332609,
+      "currentPos": 152,
+      "rankPosDiff": 0,
+      "read_count": "9912",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7673855236603120665",
+      "book_name": "HP：参加开学典礼怎么就上学了",
+      "author": "知艾瘾",
+      "tags": [
+        "女频衍生",
+        "衍生",
+        "同人",
+        "穿越"
+      ],
+      "abstract": "身为一个不标准的斯莱特林，在把侄子培养成年之后，奥克塔维娅直接远离了斯莱特林老宅，世界那么大她想去看看，这一天她受到了侄子的邀请回家参加开学典礼，作为最爱她的姑母肯定要前往啦，于是奥克塔维娅立刻动身，结果在跨越大西洋的时候遇到了雷鸟群，雷鸟是群生的吗？",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2od43eb88eddbf49b38629f5fe32652974",
+      "last_chapter_time": 1787833611,
+      "first_chapter_time": 1786724551,
+      "currentPos": 189,
+      "rankPosDiff": 0,
+      "read_count": "9306",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7663434454420966462",
+      "book_name": "HP我真的不会训狗呀",
+      "author": "龙茶",
+      "tags": [
+        "女频衍生",
+        "衍生",
+        "同人",
+        "甜宠",
+        "1v1"
+      ],
+      "abstract": "【HP+CP西里斯+亲世代+欢喜冤家+先打后爱+暗恋慢热+纯爱+日常小甜饼】\n\n【外表高冷傲娇实际专心经营淡人生活蛇院女主*恋爱小白但见老婆第一面就把她打飞了西里斯·布莱克】\n\n看前必读：\n1. 自割腿肉之作，充满作者xp和ooc，有私设\n2. 女主有精灵血脉，转学生，纯纯因为太会卷自己被分到斯莱特林，野心和欲望都是提升自己！非典型斯莱特林！（但不是蛇院狮心）\n3. 人非完人，没有完美的角色～\n\n莱拉·瑞希尔，纯血精灵后裔，斯莱特林最好说话但是最卷的级长。她优雅、冷静、外冷内热，偏偏有个无人知晓的秘密——她怕狗！\n\n西里斯·布莱克，掠夺者之一，自学阿尼玛格斯，24k纯直男。他叛逆，张扬。极其耀眼，偏偏有个隐藏绝招——变成一只英俊帅气的大黑狗！\n\n两人遇上后画风开始一路跑偏……\n\n西里斯和莱拉第一次面对面，前者就把后者打飞了。\n\n西里斯（大脚板版）和莱拉第二次面对面，把她吓得鞋都要跑掉了。\n\n大脚板：呜……QAQ\n\n詹姆：哈哈哈哈你也有今天…不对，你们怎么在一起了？！\n\n某只大黑狗把头放在莱拉的膝盖上，享受她温柔的抚摸，咧开嘴仿佛在炫耀，勇敢的人（划掉）狗先有老婆！",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o83bf87235a5041b91507113973123c96",
+      "last_chapter_time": 1787835037,
+      "first_chapter_time": 1784721562,
+      "currentPos": 190,
+      "rankPosDiff": 0,
+      "read_count": "8058",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7668721419169057854",
+      "book_name": "红楼：既入我怀，黛玉何须葬花！",
+      "author": "楚人的言",
+      "tags": [
+        "女频衍生",
+        "双洁",
+        "1v1",
+        "红楼衍生",
+        "公版衍生",
+        "衍生"
+      ],
+      "abstract": "【1v1+男女双强+双洁+日常幽默+轻松诙谐】\n京城出了个奇葩贵公子苏凌，对权力斗争毫无兴趣，唯独痴迷两件事：调香和赚钱。\n他是京城半数产业背后的神秘东家，更是玩世不恭的混不吝。\n初见林黛玉，他灵敏的鼻子立刻闻到了她身上潜藏的不足之症。他下意识皱眉，这小丫头，怕是不好养活。林黛玉则在心中给他记了一笔：此人当真无礼！\n后来，他用千金难求的奇香治好了她父亲的顽疾，用亲手调制的药丸温养了她先天带来的弱症。\n人人都道他散漫败家，他却轻描淡写地笑道：“夫人，这满京城的产业都是你的嫁妆，以后谁再敢说你寄人篱下，就拿银票砸他脸上。”",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o3d04acddfaca794b135367a405863533",
+      "last_chapter_time": 1787808942,
+      "first_chapter_time": 1785554723,
+      "currentPos": 193,
+      "rankPosDiff": 0,
+      "read_count": "8015",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7662383204011084862",
+      "book_name": "新还珠格格：再伴君旁",
+      "author": "疯欢囍",
+      "tags": [
+        "女频衍生",
+        "衍生",
+        "同人",
+        "重生"
+      ],
+      "abstract": "大理相守半生，小燕子与永琪恩爱无间，平淡日子满是温柔，却也骤然别离。\n一朝重生，她回到初入皇宫之时，归还格格身份。奈何皇阿玛疼惜，依旧册封为义女。命运再度牵起她与永琪的缘分，前世刻骨铭心的爱意依旧在，这一次是顺从皇家安排，还是勇于对抗?两人的未来又该何去何从?\n【十全十美的结局始终不觉得应该天各一方！我想写出自己的结局！纯原创，致敬琼瑶阿姨！】\n\n",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o91ad1f618ddec6d2934221a2eedeff75",
+      "last_chapter_time": 1787845060,
+      "first_chapter_time": 1784038405,
+      "currentPos": 199,
+      "rankPosDiff": 0,
+      "read_count": "7849",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7663544535607151678",
+      "book_name": "综影视：影视管理局2",
+      "author": "娜拉拉拉拉",
+      "tags": [
+        "女频衍生",
+        "衍生",
+        "甜宠",
+        "同人",
+        "穿书"
+      ],
+      "abstract": "易若优在成为上神后，在又没钱又无聊的生活中，又再次开启了任务之旅。依旧甜宠！绝对不虐。\n第一个世界：何以笙箫默×何以琛（已完结）\n第二个世界：你微笑时很美×陆思诚（未完待续）",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o9589ece36a01839fe3cf7d7f952e4bdf",
+      "last_chapter_time": 1787842491,
+      "first_chapter_time": 1785160260,
+      "currentPos": 200,
+      "rankPosDiff": 0,
+      "read_count": "7750",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7661628141529484313",
+      "book_name": "综影视：男神恋爱日记",
+      "author": "荷华l",
+      "tags": [
+        "女频衍生",
+        "衍生",
+        "同人",
+        "穿越"
+      ],
+      "abstract": "【斩神】【神印】【剑来】【大主宰】\n本人的女主角只是借用了那些女性角色的模板！ooc属于我\n世界一：是缘亦是劫（完结）\n斩神周平×剑来白景， 【i人对e人，剑修对剑修\n世界二：山盟虽在（进行中）】\n斗1阿银×斩神王面 【蓝银生平无归处，风雨流年幸得东风顾。】\n世界三：愿天使荣光永不堕\n神印伊莱克斯×斗1罗千仞雪  【阴湿男鬼×高贵天使】\n世界四：人面不知何处去\n斩神沈青竹×诛仙陆雪琪  【你怎么对我的，我就怎么对你了。】\n世界五：无可奈何花落去\n大主宰清衍静×斩神王尚  【当斩神王面有了一个极度护短的老妈。】\n世界六：此情可待成追忆\n斗3雅莉×斩神唐雨生 【起源于算计的爱情，九分真情参杂着一份假意】\n世界六：荷尔蒙游戏\n崩3德丽莎×斩神叶梵， 【大叔与萝莉，成年人的爱情】\n世界七：斩神卜离×绯红女巫旺达",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o244c78528e74bd834edb316ea35d47c6",
+      "last_chapter_time": 1787797454,
+      "first_chapter_time": 1783863415,
+      "currentPos": 212,
+      "rankPosDiff": 0,
+      "read_count": "7321",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7672662725020896280",
+      "book_name": "新还珠格格燕子大理归来",
+      "author": "江甜笙",
+      "tags": [
+        "女频衍生",
+        "古色古香",
+        "衍生"
+      ],
+      "abstract": "小燕子久居大理，终日沉醉于苍山洱海的悠然光景，本打算远离深宫恩怨，就此安稳度日。萧剑外出打探消息，带回紫薇与尔康即将大婚的消息，念着昔日同生共死的情谊，她心绪难平，决意跟着众人一同动身赶赴京城。\n\n一路风尘仆仆赶回帝都，她满心欢喜奔赴婚宴，亲眼见证挚友缔结良缘，心底满是暖意。待到喧嚣热闹的婚礼彻底落幕，喜庆散尽，一则消息骤然传来：欣荣格格已有身孕。\n\n昔日她与永琪历经万般磨难才相守，如今横亘着一条无法逾越的血脉羁绊。永琪依旧执着想要留住她，可现实残酷逼人，旧日情愫与眼前残局相互撕扯，小燕子满心茫然，深陷两难，不知该放下过往彻底离去，还是直面这份早已错位的情缘。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o62628558b10c238ae2d5fb9ed72b8a06",
+      "last_chapter_time": 1787803249,
+      "first_chapter_time": 1786432392,
+      "currentPos": 242,
+      "rankPosDiff": 0,
+      "read_count": "6273",
       "rankMold": 1
     }
   ]
