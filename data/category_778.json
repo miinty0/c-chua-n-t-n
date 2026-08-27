@@ -2,7 +2,7 @@
   "update_time": "2026-04-07 17:33:45",
   "update_date": "2026-04-07",
   "category_id": 778,
-  "total_count": 2,
+  "total_count": 1,
   "books": [
     {
       "hot_rank": 43,
@@ -21,25 +21,6 @@
       "status": "Completed",
       "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/dac1c4a6a413092f01a38645dce2decd",
       "last_chapter_time": "1773357117",
-      "rank_change": "new"
-    },
-    {
-      "hot_rank": 60,
-      "book_id": "7564224739636415513",
-      "book_name": "快穿之路人甲的旁观日常",
-      "author": "爱上自己做饭的冻梨",
-      "tags": [
-        "快穿",
-        "校园",
-        "幻想言情",
-        "穿越",
-        "搞笑轻松",
-        "胎穿"
-      ],
-      "abstract": "田蜜是穿越局路人甲部门的新员工，因为心里素质比较好，经常被投放到一些奇葩小世界中完成任务，她本人倒是无所谓，工资高，待遇好，还能免费看戏。\n本文就是田蜜的围观日常，轻松不虐，没有固定cp。",
-      "status": "Ongoing",
-      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/32e446beb0a52371d43ccaf5a35ba0a4",
-      "last_chapter_time": "1775521568",
       "rank_change": "new"
     }
   ]
