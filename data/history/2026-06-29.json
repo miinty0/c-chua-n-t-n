@@ -2,7 +2,7 @@
   "update_time": "2026-06-29 07:00:53",
   "update_date": "2026-06-29",
   "category_id": -1,
-  "total_count": 16,
+  "total_count": 17,
   "books": [
     {
       "hot_rank": 544,
@@ -261,6 +261,26 @@
       "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o53fe7ac79da409565fcb1bd402a7f19d",
       "last_chapter_time": "1766200155",
       "first_chapter_time": 1763627428,
+      "rank_change": "new"
+    },
+    {
+      "hot_rank": 1082,
+      "book_id": "7523948164068412441",
+      "book_name": "快穿：咸鱼宿主和她的鸡肋金手指",
+      "author": "卷不动的卷卷",
+      "tags": [
+        "快穿",
+        "系统",
+        "幻想言情",
+        "穿越",
+        "无CP",
+        "搞笑轻松"
+      ],
+      "abstract": "快穿+无CP+鸡肋金手指+日常搞笑风\n在快穿事业局，吊炸天的金手指向来都是对业绩冠军、王牌任务者、任务翘楚等人的奖励。\n反之，就是反之。\n于大喜这样的咸鱼党，鸡肋外挂，就......聊生于无吧。\n故事一：当妈的能生，当闺女的躺赢了（完结）\n故事二：废物女大学生回村啃老VLOG（完结）\n故事三：回家的路有多远，带飞你的天就有多高（完结）\n                                                                                                                                                                                                                                                                                                                                                 ",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o2965367401c3aa24d7157dca9ee29e60",
+      "last_chapter_time": "1782601354",
+      "first_chapter_time": 1777559562,
       "rank_change": "new"
     },
     {
