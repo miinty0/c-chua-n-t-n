@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-29 22:56:23",
-  "update_date": "2026-08-29",
+  "update_time": "2026-08-30 22:40:45",
+  "update_date": "2026-08-30",
   "category_id": 747,
-  "total_count": 706,
-  "new_count": 2,
+  "total_count": 707,
+  "new_count": 1,
   "books": [
     {
       "book_id": "7591716077432753177",
@@ -15347,6 +15347,28 @@
       "currentPos": 143,
       "rankPosDiff": 0,
       "read_count": "8507",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7663083297248922648",
+      "book_name": "盗笔：你的心思昭然若揭",
+      "author": "五七雪碧",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "幻想言情",
+        "灵异",
+        "衍生",
+        "悬疑恋爱"
+      ],
+      "abstract": "CP黑花瓶邪+沙海时期的无邪没吃饭+私设架空+多时空+OOC+作者是傻插+所有男主都是为了女主服务！啾咪～女主不是菟丝子，成长性女主。\n“确定了吗？”\n张启灵点头。\n她不想死。 \n“她认识你，也认识我。” \n元宝儿认得他们两个人。\n几世纠缠，剧情大反转！！！",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o02981fabca583b736898262d0ac2a984",
+      "last_chapter_time": 1787977451,
+      "first_chapter_time": 1786427973,
+      "currentPos": 152,
+      "rankPosDiff": 0,
+      "read_count": "1040",
       "rankMold": 1
     }
   ]
