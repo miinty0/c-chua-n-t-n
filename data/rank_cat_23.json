@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-30 22:39:49",
-  "update_date": "2026-08-30",
+  "update_time": "2026-09-01 01:22:41",
+  "update_date": "2026-09-01",
   "category_id": 23,
-  "total_count": 1225,
-  "new_count": 7,
+  "total_count": 1229,
+  "new_count": 4,
   "books": [
     {
       "book_id": "7460441115750042686",
@@ -26905,6 +26905,93 @@
       "currentPos": 293,
       "rankPosDiff": 0,
       "read_count": "1011",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7668899856609463321",
+      "book_name": "穗满杏林",
+      "author": "柒柒哒",
+      "tags": [
+        "种田",
+        "古代言情",
+        "乡村",
+        "医术",
+        "发家致富",
+        "第一人称"
+      ],
+      "abstract": "太医秦鹤年因宫中皇子夭折案被流放岭南青崖村，孙子秦子期孙女秦穗与家人踏上贬谪之路。青崖村猎户遗孀余三娘被宗族断了亲，为养活儿子石头，冒险收留了这群落魄之人。秦鹤年拖着受刑的手坐诊乡野，秦穗以药膳果酱叩开县城门户，母亲周蕙娘用仅剩的三十两银子精打细算起家。种药、养鱼、开作坊、办学堂——两家人从破屋漏瓦中一寸寸建起家园。多年后平反诏书抵达，一家人却已在此生根。这是一个关于“放下”与“选择”的故事：不是所有归来都要回原来的路，有时候扎根，才是真正的回家。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o64ca107367129f8ed0c0c755dd44c09b",
+      "last_chapter_time": 1786368084,
+      "first_chapter_time": 1785555194,
+      "currentPos": 257,
+      "rankPosDiff": 0,
+      "read_count": "1217",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7672615852578966553",
+      "book_name": "穿成恶毒族巫，兽世大佬争又抢",
+      "author": "舞末瑜",
+      "tags": [
+        "种田",
+        "古代言情",
+        "系统",
+        "穿越",
+        "兽世",
+        "基建"
+      ],
+      "abstract": "【兽世1vN＋雄竞修罗场＋基建＋养崽】\n花玥猝死后穿到兽世，成了一个心比天高，嫌贫爱富的恶毒雌性。\n不仅打骂兽夫还想把肚子里未出生的崽崽流掉。\n花玥天塌了，不过好在有金手指，绑定了一个女帝系统。\n系统自带商城，获得声望值就可以购买她想要的东西。\n生下的崽崽呆萌可爱，孔雀兽夫甚是貌美。\n水豚兽夫情绪稳定、憨厚老实。\n狐狸热情腹黑、蛊惑人心。\n还有之前舔过的虎族少族长，蛇族天骄，豹族少主，怎么一个个都打起来了！！！",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2odfa75cb4687a6388441a847e7c59c15d",
+      "last_chapter_time": 1788188404,
+      "first_chapter_time": 1786426904,
+      "currentPos": 268,
+      "rankPosDiff": 0,
+      "read_count": "1103",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7455245117171960857",
+      "book_name": "科举状元小堂姐的悠然生活",
+      "author": "月小筑",
+      "tags": [
+        "种田",
+        "古代言情",
+        "穿越",
+        "美食",
+        "穿书",
+        "发家致富"
+      ],
+      "abstract": "意外穿书后发现自己的小堂弟是书中的状元男主，这是金大腿啊，想法是好的但现实是残酷的，她咋就没能直接穿越到堂弟已经是状元了的时候，看着没长成金大腿的小豆丁堂弟，王二花觉得做人还是得脚踏实地，自己这个小人物需要奋斗的多着呢，从此上山下河她样样行，不为别的，就为了自己能够过上美好的小生活。",
+      "status": "Completed",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o96383262307f98832fd2de676e248900",
+      "last_chapter_time": 1786506282,
+      "first_chapter_time": 1735872519,
+      "currentPos": 273,
+      "rankPosDiff": 0,
+      "read_count": "1085",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7667852025530420249",
+      "book_name": "穿越西汉深山种田",
+      "author": "雪糕蛋糕",
+      "tags": [
+        "种田",
+        "古代言情",
+        "穿越",
+        "无CP",
+        "今穿古"
+      ],
+      "abstract": "【无cp、友情向、无系统、无金手指、打猎、种田、盖房子......】\n\n姜鱼刚穿越西汉就一个名为阿粟的女孩捡了，一番交流后，二人由于皆为逃犯/逃虜身份，都很倾向遁入山林生存。由此，便开始了她们的山中生活……",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2oe2e9a3fd20440271e7f1d89a4486ac0a",
+      "last_chapter_time": 1788152706,
+      "first_chapter_time": 1785311120,
+      "currentPos": 285,
+      "rankPosDiff": 0,
+      "read_count": "1017",
       "rankMold": 1
     }
   ]

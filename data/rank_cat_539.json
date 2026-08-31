@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-30 22:40:32",
-  "update_date": "2026-08-30",
+  "update_time": "2026-09-01 01:23:21",
+  "update_date": "2026-09-01",
   "category_id": 539,
-  "total_count": 718,
-  "new_count": 7,
+  "total_count": 720,
+  "new_count": 2,
   "books": [
     {
       "book_id": "7582770497335610392",
@@ -15927,6 +15927,51 @@
       "currentPos": 150,
       "rankPosDiff": 0,
       "read_count": "1090",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7672066503058934809",
+      "book_name": "老九门之九门攻略手册",
+      "author": "草莓桃酥",
+      "tags": [
+        "悬疑脑洞",
+        "系统",
+        "穿越",
+        "盗墓",
+        "灵异",
+        "衍生"
+      ],
+      "abstract": "老九门同人续写，主写与陈皮阿四的感情线。\n——张晚湜意外穿越进了九门世界，需要完成攻略任务才能活下去的故事，整个故事贯穿九门，每个人物都会写。\n情感向，盗墓向，悬疑向，日常向都有。\n（简介不会写，感兴趣请进正文♥）",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o4f245cdd51ba30691d36a380e2e04c8f",
+      "last_chapter_time": 1788187928,
+      "first_chapter_time": 1786318620,
+      "currentPos": 12,
+      "rankPosDiff": 0,
+      "read_count": "29948",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7673851434332343358",
+      "book_name": "诡异降临，我带全家进编制",
+      "author": "一品红楼",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "乡村",
+        "推理",
+        "无限流",
+        "女强",
+        "无CP"
+      ],
+      "abstract": "【一生好强大女主+醒时入秘境+梦游山海经】\n【无CP+剧情流+微恐+女主正得发邪、不圣母不冷血】\n必须在天亮之前离开这栋楼，否则会有极其严重的事情发生。\n这个念头不知何时植入陶六六的脑海。\n可这九层楼，为什么总也跑不到头？\n电梯里有浑身血红的变态杀人狂、给她打电话的妈妈不是真的妈妈、楼道里小女孩的头像皮球，挡她路的还有白色阿飘、顶流大明星、全部满分的高考题目……\n后来她才知道，这些只不过是开胃菜。\n她被秘境试炼场选中了，从此告别平凡的生活，游走于生死之间，经历一场场诡异试炼。\n旧时光会被淹没，而山海总有归期。\n值得庆幸的是，她的身后始终站着相亲相爱一家人。\n无论他们是不是自愿。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o9f0c9abff602cebf697f5096ec7610b6",
+      "last_chapter_time": 1787843145,
+      "first_chapter_time": 1786708766,
+      "currentPos": 134,
+      "rankPosDiff": 0,
+      "read_count": "1479",
       "rankMold": 1
     }
   ]
