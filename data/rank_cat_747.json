@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-09-01 01:23:36",
+  "update_time": "2026-09-01 22:30:25",
   "update_date": "2026-09-01",
   "category_id": 747,
-  "total_count": 712,
-  "new_count": 5,
+  "total_count": 714,
+  "new_count": 2,
   "books": [
     {
       "book_id": "7591716077432753177",
@@ -15480,6 +15480,51 @@
       "currentPos": 147,
       "rankPosDiff": 0,
       "read_count": "1263",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7640682671173012505",
+      "book_name": "照诡录",
+      "author": "褚枝M",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "推理",
+        "无CP",
+        "破案",
+        "群像",
+        "悬疑恋爱"
+      ],
+      "abstract": "评分刚出，后面会涨！\n全女群像 ｜无CP | 架空世界观｜古代诡案刑侦 | 半单元+长主线\n————\n大衍朝，能者为尊，女子当家。\n\n宫宴死了三个人。\n笑着死的。\n死的时候，脸都笑烂了。\n\n没人敢查。\n郡主沈昭明敢。\n\n她凑了四个奇女子——\n冷仵作、话痨道、哑影卫、毒舌剑修。\n女帝亲封玄鉴司，专查天下诡案。\n\n笑面尸、噬魂阵、十年灭门……\n一案接一案，越查越心惊。\n这盛世底下，\n压着两百年的封印，\n和一张吃人的网。\n\n幕后那人，\n就在她们身边。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o1b943e03da60a403f67cb74b21154a08",
+      "last_chapter_time": 1788214026,
+      "first_chapter_time": 1779104291,
+      "currentPos": 297,
+      "rankPosDiff": 0,
+      "read_count": "4623",
+      "rankMold": 2
+    },
+    {
+      "book_id": "7672796520512506904",
+      "book_name": "我怎么不知道我有个儿子叫无邪？",
+      "author": "兴师动众的张神师",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "盗墓",
+        "灵异",
+        "衍生",
+        "悬疑恋爱"
+      ],
+      "abstract": "吴思正少时离家，多年未回。\n他从不曾想过，在他不知道的地方，居然多了一个儿子？\n老三，你说，我的儿子叫什么来着？",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o1ad28669cb24a37e7224e43d83240228",
+      "last_chapter_time": 1788188185,
+      "first_chapter_time": 1786492863,
+      "currentPos": 143,
+      "rankPosDiff": 0,
+      "read_count": "2055",
       "rankMold": 1
     }
   ]
