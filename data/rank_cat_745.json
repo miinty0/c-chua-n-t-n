@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-09-01 22:30:20",
-  "update_date": "2026-09-01",
+  "update_time": "2026-09-02 22:03:55",
+  "update_date": "2026-09-02",
   "category_id": 745,
-  "total_count": 720,
-  "new_count": 2,
+  "total_count": 721,
+  "new_count": 1,
   "books": [
     {
       "book_id": "7590727777817480254",
@@ -15791,6 +15791,27 @@
       "currentPos": 144,
       "rankPosDiff": 0,
       "read_count": "1020",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7666059573303708697",
+      "book_name": "万人迷成为主播后，她爆火了",
+      "author": "巧克力转转",
+      "tags": [
+        "星光璀璨",
+        "现代言情",
+        "无CP",
+        "总裁",
+        "娱乐圈"
+      ],
+      "abstract": "【无CP，万人迷，直播文】\n林安安很穷，穷到风扇都不舍得开，但她却有着颠倒众生的颜值。\n于是，在她选择成为一名主播后，她爆火了，也吸引了一众神豪。\n克制古板的人为她一次又一次改变底线；\n热情似火的小狗为她冲锋陷阵；\n外表冷漠的姐姐暖心陪伴；\n阴翳病态的总裁渴望一丝垂怜；\n温润如玉的少爷......\n（神豪众多，男女都有，含爱情票大姐，建议勿入）",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2odc0eca6df09759262003c8048cd45a0b",
+      "last_chapter_time": 1787929763,
+      "first_chapter_time": 1786621855,
+      "currentPos": 130,
+      "rankPosDiff": 0,
+      "read_count": "1149",
       "rankMold": 1
     }
   ]
