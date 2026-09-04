@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-09-03 22:06:02",
-  "update_date": "2026-09-03",
+  "update_time": "2026-09-04 21:58:55",
+  "update_date": "2026-09-04",
   "category_id": 539,
-  "total_count": 734,
-  "new_count": 2,
+  "total_count": 735,
+  "new_count": 1,
   "books": [
     {
       "book_id": "7582770497335610392",
@@ -16283,6 +16283,26 @@
       "currentPos": 149,
       "rankPosDiff": 0,
       "read_count": "1560",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7672015741876456472",
+      "book_name": "天！我怎么成了恐怖副本NPC",
+      "author": "寒江清月",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "惊悚游戏",
+        "1v1"
+      ],
+      "abstract": "（1v1＋双洁＋双向奔赴＋HE）林青鸾是一名在读女大学生，却在赴闺蜜约的路上，毫无征兆地被拉进了副本里。\n一问未解，又一问，再一问地冒出。\n系统不仅说她是员工，还说她不是人。\n从副本里出来后，她忐忑地询问父母，自己是不是捡来的。\n好消息，确实是亲生的，坏消息，确实不算是人。\n自此，她便开启了漫漫副本打工路，在危机重重的副本世界里，不断成长的过程中，还收获了一个强扭的瓜。\n林青鸾：甜不甜的，尝过才知道。\n啵～这不挺甜的嘛( ͡° ͜ʖ ͡°)✧\n司徒弘宸：嗯，我就是那个被强扭的瓜……",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o719d44c59da83a391b38077301288682",
+      "last_chapter_time": 1788439820,
+      "first_chapter_time": 1786280575,
+      "currentPos": 147,
+      "rankPosDiff": 0,
+      "read_count": "1035",
       "rankMold": 1
     }
   ]
