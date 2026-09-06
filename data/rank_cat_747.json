@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-09-05 21:14:57",
-  "update_date": "2026-09-05",
+  "update_time": "2026-09-06 21:23:39",
+  "update_date": "2026-09-06",
   "category_id": 747,
-  "total_count": 727,
-  "new_count": 4,
+  "total_count": 729,
+  "new_count": 2,
   "books": [
     {
       "book_id": "7591716077432753177",
@@ -15812,6 +15812,49 @@
       "currentPos": 143,
       "rankPosDiff": 0,
       "read_count": "1149",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7206691620069051395",
+      "book_name": "盗墓：身为下乡知青的我",
+      "author": "惊鸿无意",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "穿越",
+        "盗墓",
+        "灵异",
+        "悬疑恋爱"
+      ],
+      "abstract": "我与春风皆过客，你携秋水揽星河。\n“你叫星河啊！哎呦，长得真俊。在咱这屯里的知青中是这个！”村支书冲郁星河竖了个大拇指！\n又看了看跟在郁星河身后的两个大高个子，一个哑巴，一个瞎子，唉！也是可怜人！\n郁星河感觉到支书大叔的眼神，往身后飘了一眼，抿嘴偷笑。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o5a0e33941e284e74a0fd4ef2a4525f2d",
+      "last_chapter_time": 1788682548,
+      "first_chapter_time": 1744855235,
+      "currentPos": 274,
+      "rankPosDiff": 0,
+      "read_count": "11030",
+      "rankMold": 2
+    },
+    {
+      "book_id": "7669431951719140377",
+      "book_name": "大人，我是弱女子，怎么敢杀人？",
+      "author": "幺寐",
+      "tags": [
+        "女频悬疑",
+        "悬疑",
+        "推理",
+        "破案",
+        "悬疑恋爱"
+      ],
+      "abstract": "扶箬儿是她给自己起的名字，她娘一直叫她死丫头，她从小就知道自己要杀掉一个人。\n她成功了，却也失去了生活的目标。\n直到来到潼阳城，她又有了新的目标。\n-\n潼阳城是三朝元老唐相的祖籍，唐相寿终正寝后，作为嫡孙的唐白坚与族人一同扶灵回乡。\n远离了朝廷纷扰，他以为从此可以闲云野鹤，却不想小小的潼阳城接二连三发生命案……",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2oef58d85ae97cbf0e0b9305c9653d7f53",
+      "last_chapter_time": 1788653873,
+      "first_chapter_time": 1785754773,
+      "currentPos": 133,
+      "rankPosDiff": 0,
+      "read_count": "1339",
       "rankMold": 1
     }
   ]
