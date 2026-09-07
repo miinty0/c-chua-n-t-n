@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-09-06 21:23:30",
-  "update_date": "2026-09-06",
+  "update_time": "2026-09-07 23:29:47",
+  "update_date": "2026-09-07",
   "category_id": 539,
-  "total_count": 741,
-  "new_count": 2,
+  "total_count": 745,
+  "new_count": 4,
   "books": [
     {
       "book_id": "7582770497335610392",
@@ -16435,6 +16435,95 @@
       "currentPos": 142,
       "rankPosDiff": 0,
       "read_count": "1128",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7661673738508717080",
+      "book_name": "盗笔：解雨臣捡了个想死的崽",
+      "author": "淮迟栖",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "系统",
+        "同人",
+        "穿越"
+      ],
+      "abstract": "顾宴安好不容易拼死考上大学，一睁眼却被系统扔回高一新生座位上——听到要再读三年书那一刻，心都死了，真心觉得这世界就是针对他\n详细请看正文，不喜欢退出去，谢谢理解",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2oaaa4b48d8d6fd01ea0dcf7d9b2834732",
+      "last_chapter_time": 1788714663,
+      "first_chapter_time": 1784237667,
+      "currentPos": 71,
+      "rankPosDiff": 0,
+      "read_count": "3789",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7665975296062917694",
+      "book_name": "诡异世界：魔女的我认为我是人",
+      "author": "神山T",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "风水秘术",
+        "重生",
+        "天灾",
+        "灵异",
+        "捉鬼"
+      ],
+      "abstract": "七岁的我遭遇车祸死亡，再次醒来时诡异横行。\n在一场神秘的仪式中我吞噬了魔女之心，变成了魔女，拥有诡异与人类的双重身份。但我依旧以人类的身份过着日常生活。\n面对天灾乱世，我将彻底取代天灾，带来永远的安逸。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o93dc5b4102e33f77b5224d7589d010cb",
+      "last_chapter_time": 1788788811,
+      "first_chapter_time": 1784881209,
+      "currentPos": 125,
+      "rankPosDiff": 0,
+      "read_count": "1392",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7674574386195598361",
+      "book_name": "九门：橘子皮和他的菩萨娘娘",
+      "author": "我在炫饭",
+      "tags": [
+        "悬疑脑洞",
+        "系统",
+        "穿越",
+        "灵异",
+        "搞笑轻松",
+        "衍生"
+      ],
+      "abstract": "【he＋穿越＋救赎＋年下＋微虐＋搞笑＋弥补遗憾】\n全员he，中间小虐，有糖有刀。\nCP：陈皮x金景沅（先婚后爱？大概...）其余CP不定时出没。\n孙景沅被期末考试逼疯了，对着病例一通胡说八道。\n扣光功德后，被某个不知名医疗系统绑定，发配到民国。\n利用各种医疗资源，靠接单治病攒功德，攒够才能回原世界。\n第一单：一个躺在路边，满身是血的小乞丐...手里还捏着个螃蟹抓子。\n第n单：一个花鼓戏名伶的爱妻。\n第n＋1单：给一个残疾人做假肢，并给残疾人的嫂子接生。\n第n＋2单：给一位青楼女子，治妇科病。\n第n＋3单：给一个帅哥...的狗，看病。\n景沅：等等！...老子是医，不是兽医啊，混蛋！\n穿越前：孙景沅；穿越后：金景沅\n景沅：改个姓，也不是变性，问题不大。\n去留学，靠钞能力上哈佛。\n景沅：啃家里，我光荣。\n进了...医学院。\n景沅：...报应！\n系统：宝子，你的报应还没来呢...\n景沅：......\n直到作为她丈夫的陈皮，用九爪钩，抓碎了一个人的脑袋。\n系统：夫妻深度绑定，功德－100。\n看着攒了好久的功德一路狂掉，景沅咬牙切齿。\n陈皮：菩萨娘娘...讨厌我杀人？\n景沅：你杀一个，我救一百个。\n陈皮：菩萨娘娘...你爱我。\n景沅：......",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o4a88388c1da1ffc183c5530873632dfd",
+      "last_chapter_time": 1788761337,
+      "first_chapter_time": 1787237820,
+      "currentPos": 128,
+      "rankPosDiff": 0,
+      "read_count": "1719",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7530976175678557208",
+      "book_name": "柯南同人：苍白棋手",
+      "author": "乌舟舟",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "悬疑恋爱",
+        "推理",
+        "二次元",
+        "打脸",
+        "同人"
+      ],
+      "abstract": "组织最优雅的刽子手，御门财团病弱的贵公子——当江户川柯南发现这位‘白兰地’的真面目时，死神早已为他预留了最华丽的舞台。",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2oe60b73a953daa5b9872cc6ba80fe1ee1",
+      "last_chapter_time": 1788429724,
+      "first_chapter_time": 1753502416,
+      "currentPos": 138,
+      "rankPosDiff": 0,
+      "read_count": "1207",
       "rankMold": 1
     }
   ]
