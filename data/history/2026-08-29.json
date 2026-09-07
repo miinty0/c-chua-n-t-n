@@ -2,7 +2,7 @@
   "update_time": "2026-08-29 11:30:32",
   "update_date": "2026-08-29",
   "category_id": -1,
-  "total_count": 25,
+  "total_count": 24,
   "books": [
     {
       "hot_rank": 405,
@@ -476,26 +476,6 @@
       "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2oa8a7c9bf7bcbb51e9b88dd125decba05",
       "last_chapter_time": "1785598518",
       "first_chapter_time": 1777939767,
-      "rank_change": "new"
-    },
-    {
-      "hot_rank": 1343,
-      "book_id": "7513113339283639358",
-      "book_name": "穿越：从丫鬟开始的人生",
-      "author": "林令滢",
-      "tags": [
-        "宫斗宅斗",
-        "古代��情",
-        "穿越",
-        "今穿古",
-        "魂穿",
-        "胎穿"
-      ],
-      "abstract": "（评分刚出不久，慢慢涨中～）\n[成长型女主+女主不圣母]\n有个未来是一代妖后的亲姐姐怎么办？\n司虞的回答是，活着。\n穿成刚被卖为奴婢的农家女，如何做好一个丫鬟才是最要紧的。\n毕竟，要是活不下来，未来哪儿来掺着砒霜的福可享呢？\n敲黑板剧透：1.不会做妾，2.主角身边的男子都是生命过客，合则聚不合则散，再优秀也比不过自己重要",
-      "status": "Ongoing",
-      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2oee06fb94d3371d73deca2ada4c27b432",
-      "last_chapter_time": "1787932100",
-      "first_chapter_time": 1749307384,
       "rank_change": "new"
     }
   ]
