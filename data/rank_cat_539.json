@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-09-07 23:29:47",
-  "update_date": "2026-09-07",
+  "update_time": "2026-09-08 22:06:27",
+  "update_date": "2026-09-08",
   "category_id": 539,
-  "total_count": 745,
-  "new_count": 4,
+  "total_count": 747,
+  "new_count": 2,
   "books": [
     {
       "book_id": "7582770497335610392",
@@ -16524,6 +16524,51 @@
       "currentPos": 138,
       "rankPosDiff": 0,
       "read_count": "1207",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7674610264548838462",
+      "book_name": "我在恐怖副本摆摊卖卷饼",
+      "author": "欧五机",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "风水秘术",
+        "推理",
+        "惊悚游戏",
+        "无CP",
+        "系统"
+      ],
+      "abstract": "【无限流➕悬疑➕灵异➕无cp➕女主】\n\n林雾只是个普通的毕业生。\n\n一场车祸后，她被拖进了一个诡异的世界。这里是不断循环的恐怖副本。\n\n夜半私语、午夜婚嫁、无人小岛、暴雪山庄……\n一个个熟悉的恐怖故事正在真实上演。\n\n玩家们拼命逃生，躲避厉鬼与诅咒。\n\n而林雾绑定的系统却告诉她：请摆摊营业。\n——卖卷饼。\n\n当别人被鬼追杀时，她在路边摊煎卷饼。\n\n当主角团惊魂未定时，她递上一份清醒卷饼。\n\n甚至连厉鬼都忍不住停下脚步。“老板……卷饼怎么卖？”\n\n林雾露出微笑营业：“七块一份，要辣吗？”",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/p2o62e5e18ecd3d9b728b0ae5d473c3421d",
+      "last_chapter_time": 1788787868,
+      "first_chapter_time": 1786889179,
+      "currentPos": 120,
+      "rankPosDiff": 0,
+      "read_count": "1517",
+      "rankMold": 1
+    },
+    {
+      "book_id": "7535291818292825112",
+      "book_name": "四个男主修罗场，我只想回家！",
+      "author": "十栖诗",
+      "tags": [
+        "悬疑脑洞",
+        "悬疑",
+        "系统",
+        "穿越",
+        "腹黑",
+        "灵异"
+      ],
+      "abstract": "【1v4➕系统➕悬疑破案➕中式恐怖】\n女大学生夏禾意外穿越，醒来时发现自己被神秘人五花大绑，昏暗的房间内涂满了诡异图案。\n这里诡谲怪诞，光怪陆离，尔虞我诈，重重血案浮现。\n【反差萌御姐】✖️【隐忍克制清冷师尊】✖️【腹黑病娇少年帝王】✖️【温润如玉谦谦公子】✖️【意气风发探险战友】\n一朝穿越，她竟意外觉醒了系统。\n这个世界危机四伏，她先后经历井底的女人、尸鬼飘荡的村庄……\n在危险与谜团中交织出一段惊心动魄的冒险。\n她该如何隐瞒身份？\n又该如何收集四枚灵珠回家？\n——\n感情发展较慢，剧情不算恐怖，全文虚构",
+      "status": "Ongoing",
+      "thumb_url": "https://p6-novel.byteimg.com/thumb/novel-pic/d0d570a73be169a5e7eaa7c2c33d7373",
+      "last_chapter_time": 1788865660,
+      "first_chapter_time": 1754542970,
+      "currentPos": 136,
+      "rankPosDiff": 0,
+      "read_count": "1187",
       "rankMold": 1
     }
   ]
